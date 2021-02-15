@@ -2,9 +2,11 @@
 #define GAME_H
 
 #include "SDL.h"
-#include "SDL.h"
 #include "SDL_image.h"
 #include "SDL_ttf.h"
+#include "glm/glm.hpp"
+#include "imgui.h"
+#include "sol/sol.hpp"
 
 #define GAME_TITLE "THE GAME"
 

@@ -2,8 +2,12 @@
 #include "Constants.h"
 #include "Game.h"
 
+
+
+
 int main(int argc, char *args[])
 {
+	sol::state lua;
 	Game *game = new Game();
 	game->Init(WINDOW_WIDTH, WINDOW_HEIGHT);
 
@@ -14,5 +18,6 @@ int main(int argc, char *args[])
 		game->Render();
 	}
 	game->Destroy();
+	delete game;
 	return(0);
 }

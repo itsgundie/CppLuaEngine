@@ -1,7 +1,7 @@
 # Makefile to build and install the SDL library
 
 top_builddir = .
-srcdir  = /Users/user-n184/Desktop/LUA/lib/SDL2
+srcdir  = /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2
 objects = build
 gen = gen
 prefix = /usr/local
@@ -19,9 +19,9 @@ distfile = $(distdir).tar.gz
 
 SHELL	= /bin/sh
 CC      = gcc
-INCLUDE = -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos
+INCLUDE = -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos
 CFLAGS  = -g -O3 -DUSING_GENERATED_CONFIG_H
-EXTRA_CFLAGS = -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -mmmx -m3dnow -msse -msse2 -msse3 -Wall -fno-strict-aliasing -DTARGET_API_MAC_CARBON -DTARGET_API_MAC_OSX -fvisibility=hidden -Wdeclaration-after-statement -Werror=declaration-after-statement -D_THREAD_SAFE -I/Users/user-n184/Desktop/LUA/lib/SDL2/src/hidapi/hidapi -fobjc-weak -Wno-unused-command-line-argument
+EXTRA_CFLAGS = -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -mmmx -m3dnow -msse -msse2 -msse3 -Wall -fno-strict-aliasing -DTARGET_API_MAC_CARBON -DTARGET_API_MAC_OSX -fvisibility=hidden -Wdeclaration-after-statement -Werror=declaration-after-statement -D_THREAD_SAFE -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/hidapi/hidapi -fobjc-weak -Wno-unused-command-line-argument
 LDFLAGS = 
 EXTRA_LDFLAGS =  -lm -liconv  -Wl,-framework,CoreAudio -Wl,-framework,AudioToolbox -Wl,-weak_framework,CoreHaptics -Wl,-weak_framework,GameController -Wl,-framework,ForceFeedback -lobjc -Wl,-framework,CoreVideo -Wl,-framework,Cocoa -Wl,-framework,Carbon -Wl,-framework,IOKit -Wl,-weak_framework,QuartzCore -Wl,-weak_framework,Metal
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
@@ -257,510 +257,510 @@ rpm: $(distfile)
 -include $(OBJECTS:.lo=.d)
 
 # Special dependency for SDL.c, since it depends on SDL_revision.h
-/Users/user-n184/Desktop/LUA/lib/SDL2/src/SDL.c: update-revision
+/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/SDL.c: update-revision
 
-$(objects)/SDL.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/SDL.c $(objects)/.created
+$(objects)/SDL.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/SDL.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_assert.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/SDL_assert.c $(objects)/.created
+$(objects)/SDL_assert.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/SDL_assert.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dataqueue.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/SDL_dataqueue.c $(objects)/.created
+$(objects)/SDL_dataqueue.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/SDL_dataqueue.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_error.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/SDL_error.c $(objects)/.created
+$(objects)/SDL_error.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/SDL_error.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hints.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/SDL_hints.c $(objects)/.created
+$(objects)/SDL_hints.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/SDL_hints.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_log.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/SDL_log.c $(objects)/.created
+$(objects)/SDL_log.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/SDL_log.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_atomic.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/atomic/SDL_atomic.c $(objects)/.created
+$(objects)/SDL_atomic.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/atomic/SDL_atomic.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_spinlock.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/atomic/SDL_spinlock.c $(objects)/.created
+$(objects)/SDL_spinlock.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/atomic/SDL_spinlock.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audio.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/SDL_audio.c $(objects)/.created
+$(objects)/SDL_audio.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/SDL_audio.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiocvt.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/SDL_audiocvt.c $(objects)/.created
+$(objects)/SDL_audiocvt.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/SDL_audiocvt.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiodev.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/SDL_audiodev.c $(objects)/.created
+$(objects)/SDL_audiodev.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/SDL_audiodev.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiotypecvt.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/SDL_audiotypecvt.c $(objects)/.created
+$(objects)/SDL_audiotypecvt.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/SDL_audiotypecvt.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_mixer.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/SDL_mixer.c $(objects)/.created
+$(objects)/SDL_mixer.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/SDL_mixer.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_wave.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/SDL_wave.c $(objects)/.created
+$(objects)/SDL_wave.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/SDL_wave.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cpuinfo.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/cpuinfo/SDL_cpuinfo.c $(objects)/.created
+$(objects)/SDL_cpuinfo.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/cpuinfo/SDL_cpuinfo.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dynapi.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/dynapi/SDL_dynapi.c $(objects)/.created
+$(objects)/SDL_dynapi.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/dynapi/SDL_dynapi.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_clipboardevents.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_clipboardevents.c $(objects)/.created
+$(objects)/SDL_clipboardevents.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_clipboardevents.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_displayevents.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_displayevents.c $(objects)/.created
+$(objects)/SDL_displayevents.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_displayevents.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dropevents.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_dropevents.c $(objects)/.created
+$(objects)/SDL_dropevents.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_dropevents.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_events.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_events.c $(objects)/.created
+$(objects)/SDL_events.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_events.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_gesture.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_gesture.c $(objects)/.created
+$(objects)/SDL_gesture.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_gesture.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_keyboard.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_keyboard.c $(objects)/.created
+$(objects)/SDL_keyboard.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_keyboard.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_mouse.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_mouse.c $(objects)/.created
+$(objects)/SDL_mouse.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_mouse.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_quit.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_quit.c $(objects)/.created
+$(objects)/SDL_quit.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_quit.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_touch.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_touch.c $(objects)/.created
+$(objects)/SDL_touch.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_touch.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_windowevents.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/events/SDL_windowevents.c $(objects)/.created
+$(objects)/SDL_windowevents.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/events/SDL_windowevents.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rwops.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/file/SDL_rwops.c $(objects)/.created
+$(objects)/SDL_rwops.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/file/SDL_rwops.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_haptic.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/haptic/SDL_haptic.c $(objects)/.created
+$(objects)/SDL_haptic.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/haptic/SDL_haptic.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_gamecontroller.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/SDL_gamecontroller.c $(objects)/.created
+$(objects)/SDL_gamecontroller.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/SDL_gamecontroller.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_joystick.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/SDL_joystick.c $(objects)/.created
+$(objects)/SDL_joystick.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/SDL_joystick.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_atan2.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/e_atan2.c $(objects)/.created
+$(objects)/e_atan2.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/e_atan2.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_exp.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/e_exp.c $(objects)/.created
+$(objects)/e_exp.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/e_exp.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_fmod.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/e_fmod.c $(objects)/.created
+$(objects)/e_fmod.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/e_fmod.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_log.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/e_log.c $(objects)/.created
+$(objects)/e_log.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/e_log.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_log10.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/e_log10.c $(objects)/.created
+$(objects)/e_log10.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/e_log10.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_pow.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/e_pow.c $(objects)/.created
+$(objects)/e_pow.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/e_pow.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_rem_pio2.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/e_rem_pio2.c $(objects)/.created
+$(objects)/e_rem_pio2.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/e_rem_pio2.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_sqrt.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/e_sqrt.c $(objects)/.created
+$(objects)/e_sqrt.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/e_sqrt.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_cos.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/k_cos.c $(objects)/.created
+$(objects)/k_cos.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/k_cos.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_rem_pio2.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/k_rem_pio2.c $(objects)/.created
+$(objects)/k_rem_pio2.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/k_rem_pio2.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_sin.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/k_sin.c $(objects)/.created
+$(objects)/k_sin.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/k_sin.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_tan.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/k_tan.c $(objects)/.created
+$(objects)/k_tan.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/k_tan.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_atan.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/s_atan.c $(objects)/.created
+$(objects)/s_atan.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/s_atan.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_copysign.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/s_copysign.c $(objects)/.created
+$(objects)/s_copysign.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/s_copysign.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_cos.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/s_cos.c $(objects)/.created
+$(objects)/s_cos.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/s_cos.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_fabs.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/s_fabs.c $(objects)/.created
+$(objects)/s_fabs.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/s_fabs.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_floor.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/s_floor.c $(objects)/.created
+$(objects)/s_floor.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/s_floor.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_scalbn.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/s_scalbn.c $(objects)/.created
+$(objects)/s_scalbn.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/s_scalbn.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_sin.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/s_sin.c $(objects)/.created
+$(objects)/s_sin.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/s_sin.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_tan.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/libm/s_tan.c $(objects)/.created
+$(objects)/s_tan.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/libm/s_tan.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_url.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/misc/SDL_url.c $(objects)/.created
+$(objects)/SDL_url.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/misc/SDL_url.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_power.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/power/SDL_power.c $(objects)/.created
+$(objects)/SDL_power.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/power/SDL_power.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_d3dmath.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/SDL_d3dmath.c $(objects)/.created
+$(objects)/SDL_d3dmath.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/SDL_d3dmath.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/SDL_render.c $(objects)/.created
+$(objects)/SDL_render.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/SDL_render.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_yuv_sw.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/SDL_yuv_sw.c $(objects)/.created
+$(objects)/SDL_yuv_sw.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/SDL_yuv_sw.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_d3d.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/direct3d/SDL_render_d3d.c $(objects)/.created
+$(objects)/SDL_render_d3d.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/direct3d/SDL_render_d3d.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shaders_d3d.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/direct3d/SDL_shaders_d3d.c $(objects)/.created
+$(objects)/SDL_shaders_d3d.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/direct3d/SDL_shaders_d3d.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_d3d11.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/direct3d11/SDL_render_d3d11.c $(objects)/.created
+$(objects)/SDL_render_d3d11.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/direct3d11/SDL_render_d3d11.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shaders_d3d11.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/direct3d11/SDL_shaders_d3d11.c $(objects)/.created
+$(objects)/SDL_shaders_d3d11.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/direct3d11/SDL_shaders_d3d11.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gl.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/opengl/SDL_render_gl.c $(objects)/.created
+$(objects)/SDL_render_gl.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/opengl/SDL_render_gl.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shaders_gl.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/opengl/SDL_shaders_gl.c $(objects)/.created
+$(objects)/SDL_shaders_gl.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/opengl/SDL_shaders_gl.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gles.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/opengles/SDL_render_gles.c $(objects)/.created
+$(objects)/SDL_render_gles.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/opengles/SDL_render_gles.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gles2.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/opengles2/SDL_render_gles2.c $(objects)/.created
+$(objects)/SDL_render_gles2.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/opengles2/SDL_render_gles2.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shaders_gles2.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/opengles2/SDL_shaders_gles2.c $(objects)/.created
+$(objects)/SDL_shaders_gles2.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/opengles2/SDL_shaders_gles2.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_psp.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/psp/SDL_render_psp.c $(objects)/.created
+$(objects)/SDL_render_psp.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/psp/SDL_render_psp.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendfillrect.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/software/SDL_blendfillrect.c $(objects)/.created
+$(objects)/SDL_blendfillrect.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/software/SDL_blendfillrect.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendline.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/software/SDL_blendline.c $(objects)/.created
+$(objects)/SDL_blendline.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/software/SDL_blendline.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendpoint.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/software/SDL_blendpoint.c $(objects)/.created
+$(objects)/SDL_blendpoint.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/software/SDL_blendpoint.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_drawline.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/software/SDL_drawline.c $(objects)/.created
+$(objects)/SDL_drawline.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/software/SDL_drawline.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_drawpoint.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/software/SDL_drawpoint.c $(objects)/.created
+$(objects)/SDL_drawpoint.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/software/SDL_drawpoint.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_sw.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/software/SDL_render_sw.c $(objects)/.created
+$(objects)/SDL_render_sw.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/software/SDL_render_sw.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rotate.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/software/SDL_rotate.c $(objects)/.created
+$(objects)/SDL_rotate.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/software/SDL_rotate.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sensor.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/sensor/SDL_sensor.c $(objects)/.created
+$(objects)/SDL_sensor.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/sensor/SDL_sensor.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_crc32.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/stdlib/SDL_crc32.c $(objects)/.created
+$(objects)/SDL_crc32.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/stdlib/SDL_crc32.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_getenv.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/stdlib/SDL_getenv.c $(objects)/.created
+$(objects)/SDL_getenv.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/stdlib/SDL_getenv.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_iconv.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/stdlib/SDL_iconv.c $(objects)/.created
+$(objects)/SDL_iconv.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/stdlib/SDL_iconv.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_malloc.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/stdlib/SDL_malloc.c $(objects)/.created
+$(objects)/SDL_malloc.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/stdlib/SDL_malloc.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_qsort.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/stdlib/SDL_qsort.c $(objects)/.created
+$(objects)/SDL_qsort.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/stdlib/SDL_qsort.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_stdlib.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/stdlib/SDL_stdlib.c $(objects)/.created
+$(objects)/SDL_stdlib.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/stdlib/SDL_stdlib.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_string.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/stdlib/SDL_string.c $(objects)/.created
+$(objects)/SDL_string.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/stdlib/SDL_string.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_strtokr.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/stdlib/SDL_strtokr.c $(objects)/.created
+$(objects)/SDL_strtokr.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/stdlib/SDL_strtokr.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_thread.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/thread/SDL_thread.c $(objects)/.created
+$(objects)/SDL_thread.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/thread/SDL_thread.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_timer.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/timer/SDL_timer.c $(objects)/.created
+$(objects)/SDL_timer.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/timer/SDL_timer.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_RLEaccel.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_RLEaccel.c $(objects)/.created
+$(objects)/SDL_RLEaccel.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_RLEaccel.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_blit.c $(objects)/.created
+$(objects)/SDL_blit.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_blit.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_0.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_blit_0.c $(objects)/.created
+$(objects)/SDL_blit_0.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_blit_0.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_1.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_blit_1.c $(objects)/.created
+$(objects)/SDL_blit_1.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_blit_1.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_A.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_blit_A.c $(objects)/.created
+$(objects)/SDL_blit_A.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_blit_A.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_N.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_blit_N.c $(objects)/.created
+$(objects)/SDL_blit_N.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_blit_N.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_auto.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_blit_auto.c $(objects)/.created
+$(objects)/SDL_blit_auto.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_blit_auto.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_copy.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_blit_copy.c $(objects)/.created
+$(objects)/SDL_blit_copy.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_blit_copy.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_slow.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_blit_slow.c $(objects)/.created
+$(objects)/SDL_blit_slow.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_blit_slow.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_bmp.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_bmp.c $(objects)/.created
+$(objects)/SDL_bmp.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_bmp.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_clipboard.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_clipboard.c $(objects)/.created
+$(objects)/SDL_clipboard.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_clipboard.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_egl.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_egl.c $(objects)/.created
+$(objects)/SDL_egl.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_egl.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_fillrect.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_fillrect.c $(objects)/.created
+$(objects)/SDL_fillrect.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_fillrect.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_pixels.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_pixels.c $(objects)/.created
+$(objects)/SDL_pixels.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_pixels.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rect.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_rect.c $(objects)/.created
+$(objects)/SDL_rect.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_rect.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shape.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_shape.c $(objects)/.created
+$(objects)/SDL_shape.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_shape.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_stretch.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_stretch.c $(objects)/.created
+$(objects)/SDL_stretch.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_stretch.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_surface.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_surface.c $(objects)/.created
+$(objects)/SDL_surface.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_surface.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_video.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_video.c $(objects)/.created
+$(objects)/SDL_video.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_video.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_vulkan_utils.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_vulkan_utils.c $(objects)/.created
+$(objects)/SDL_vulkan_utils.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_vulkan_utils.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_yuv.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/SDL_yuv.c $(objects)/.created
+$(objects)/SDL_yuv.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/SDL_yuv.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/yuv_rgb.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/yuv2rgb/yuv_rgb.c $(objects)/.created
+$(objects)/yuv_rgb.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/yuv2rgb/yuv_rgb.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_locale.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/locale/SDL_locale.c $(objects)/.created
+$(objects)/SDL_locale.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/locale/SDL_locale.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullevents.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/dummy/SDL_nullevents.c $(objects)/.created
+$(objects)/SDL_nullevents.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/dummy/SDL_nullevents.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullframebuffer.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/dummy/SDL_nullframebuffer.c $(objects)/.created
+$(objects)/SDL_nullframebuffer.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/dummy/SDL_nullframebuffer.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullvideo.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/dummy/SDL_nullvideo.c $(objects)/.created
+$(objects)/SDL_nullvideo.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/dummy/SDL_nullvideo.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_diskaudio.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/disk/SDL_diskaudio.c $(objects)/.created
+$(objects)/SDL_diskaudio.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/disk/SDL_diskaudio.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dummyaudio.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/dummy/SDL_dummyaudio.c $(objects)/.created
+$(objects)/SDL_dummyaudio.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/dummy/SDL_dummyaudio.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysloadso.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/loadso/dlopen/SDL_sysloadso.c $(objects)/.created
+$(objects)/SDL_sysloadso.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/loadso/dlopen/SDL_sysloadso.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoaclipboard.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoaclipboard.m $(objects)/.created
+$(objects)/SDL_cocoaclipboard.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoaclipboard.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoaevents.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoaevents.m $(objects)/.created
+$(objects)/SDL_cocoaevents.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoaevents.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoakeyboard.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoakeyboard.m $(objects)/.created
+$(objects)/SDL_cocoakeyboard.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoakeyboard.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoamessagebox.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoamessagebox.m $(objects)/.created
+$(objects)/SDL_cocoamessagebox.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoamessagebox.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoametalview.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoametalview.m $(objects)/.created
+$(objects)/SDL_cocoametalview.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoametalview.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoamodes.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoamodes.m $(objects)/.created
+$(objects)/SDL_cocoamodes.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoamodes.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoamouse.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoamouse.m $(objects)/.created
+$(objects)/SDL_cocoamouse.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoamouse.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoamousetap.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoamousetap.m $(objects)/.created
+$(objects)/SDL_cocoamousetap.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoamousetap.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoaopengl.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoaopengl.m $(objects)/.created
+$(objects)/SDL_cocoaopengl.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoaopengl.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoaopengles.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoaopengles.m $(objects)/.created
+$(objects)/SDL_cocoaopengles.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoaopengles.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoashape.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoashape.m $(objects)/.created
+$(objects)/SDL_cocoashape.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoashape.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoavideo.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoavideo.m $(objects)/.created
+$(objects)/SDL_cocoavideo.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoavideo.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoavulkan.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoavulkan.m $(objects)/.created
+$(objects)/SDL_cocoavulkan.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoavulkan.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cocoawindow.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/cocoa/SDL_cocoawindow.m $(objects)/.created
+$(objects)/SDL_cocoawindow.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/cocoa/SDL_cocoawindow.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_metal.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/render/metal/SDL_render_metal.m $(objects)/.created
+$(objects)/SDL_render_metal.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/render/metal/SDL_render_metal.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_systhread.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/thread/pthread/SDL_systhread.c $(objects)/.created
+$(objects)/SDL_systhread.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/thread/pthread/SDL_systhread.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syssem.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/thread/pthread/SDL_syssem.c $(objects)/.created
+$(objects)/SDL_syssem.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/thread/pthread/SDL_syssem.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysmutex.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/thread/pthread/SDL_sysmutex.c $(objects)/.created
+$(objects)/SDL_sysmutex.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/thread/pthread/SDL_sysmutex.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syscond.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/thread/pthread/SDL_syscond.c $(objects)/.created
+$(objects)/SDL_syscond.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/thread/pthread/SDL_syscond.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_systls.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/thread/pthread/SDL_systls.c $(objects)/.created
+$(objects)/SDL_systls.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/thread/pthread/SDL_systls.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_gamecube.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_gamecube.c $(objects)/.created
+$(objects)/SDL_hidapi_gamecube.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_gamecube.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_ps4.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_ps4.c $(objects)/.created
+$(objects)/SDL_hidapi_ps4.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_ps4.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_ps5.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_ps5.c $(objects)/.created
+$(objects)/SDL_hidapi_ps5.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_ps5.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_rumble.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_rumble.c $(objects)/.created
+$(objects)/SDL_hidapi_rumble.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_rumble.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_steam.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_steam.c $(objects)/.created
+$(objects)/SDL_hidapi_steam.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_steam.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_switch.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_switch.c $(objects)/.created
+$(objects)/SDL_hidapi_switch.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_switch.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_xbox360.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_xbox360.c $(objects)/.created
+$(objects)/SDL_hidapi_xbox360.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_xbox360.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_xbox360w.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_xbox360w.c $(objects)/.created
+$(objects)/SDL_hidapi_xbox360w.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_xbox360w.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi_xboxone.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapi_xboxone.c $(objects)/.created
+$(objects)/SDL_hidapi_xboxone.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapi_xboxone.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapijoystick.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/hidapi/SDL_hidapijoystick.c $(objects)/.created
+$(objects)/SDL_hidapijoystick.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/hidapi/SDL_hidapijoystick.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hidapi.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/hidapi/SDL_hidapi.c $(objects)/.created
+$(objects)/SDL_hidapi.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/hidapi/SDL_hidapi.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysurl.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/misc/macosx/SDL_sysurl.m $(objects)/.created
+$(objects)/SDL_sysurl.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/misc/macosx/SDL_sysurl.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syslocale.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/locale/macosx/SDL_syslocale.m $(objects)/.created
+$(objects)/SDL_syslocale.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/locale/macosx/SDL_syslocale.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_coreaudio.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/audio/coreaudio/SDL_coreaudio.m $(objects)/.created
+$(objects)/SDL_coreaudio.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/audio/coreaudio/SDL_coreaudio.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_iokitjoystick.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/darwin/SDL_iokitjoystick.c $(objects)/.created
+$(objects)/SDL_iokitjoystick.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/darwin/SDL_iokitjoystick.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_mfijoystick.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/iphoneos/SDL_mfijoystick.m $(objects)/.created
+$(objects)/SDL_mfijoystick.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/iphoneos/SDL_mfijoystick.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syshaptic.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/haptic/darwin/SDL_syshaptic.c $(objects)/.created
+$(objects)/SDL_syshaptic.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/haptic/darwin/SDL_syshaptic.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syspower.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/power/macosx/SDL_syspower.c $(objects)/.created
+$(objects)/SDL_syspower.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/power/macosx/SDL_syspower.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysfilesystem.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/filesystem/cocoa/SDL_sysfilesystem.m $(objects)/.created
+$(objects)/SDL_sysfilesystem.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/filesystem/cocoa/SDL_sysfilesystem.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_systimer.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/timer/unix/SDL_systimer.c $(objects)/.created
+$(objects)/SDL_systimer.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/timer/unix/SDL_systimer.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rwopsbundlesupport.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/file/cocoa/SDL_rwopsbundlesupport.m $(objects)/.created
+$(objects)/SDL_rwopsbundlesupport.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/file/cocoa/SDL_rwopsbundlesupport.m $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_poll.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/core/unix/SDL_poll.c $(objects)/.created
+$(objects)/SDL_poll.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/core/unix/SDL_poll.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_virtualjoystick.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/joystick/virtual/SDL_virtualjoystick.c $(objects)/.created
+$(objects)/SDL_virtualjoystick.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/joystick/virtual/SDL_virtualjoystick.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dummysensor.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/sensor/dummy/SDL_dummysensor.c $(objects)/.created
+$(objects)/SDL_dummysensor.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/sensor/dummy/SDL_dummysensor.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
 
-$(objects)/SDL_dummy_main.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/main/dummy/SDL_dummy_main.c $(objects)/.created
+$(objects)/SDL_dummy_main.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/main/dummy/SDL_dummy_main.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_test_assert.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_assert.c $(objects)/.created
+$(objects)/SDL_test_assert.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_assert.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_common.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_common.c $(objects)/.created
+$(objects)/SDL_test_common.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_common.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_compare.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_compare.c $(objects)/.created
+$(objects)/SDL_test_compare.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_compare.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_crc32.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_crc32.c $(objects)/.created
+$(objects)/SDL_test_crc32.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_crc32.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_font.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_font.c $(objects)/.created
+$(objects)/SDL_test_font.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_font.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_fuzzer.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_fuzzer.c $(objects)/.created
+$(objects)/SDL_test_fuzzer.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_fuzzer.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_harness.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_harness.c $(objects)/.created
+$(objects)/SDL_test_harness.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_harness.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageBlit.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_imageBlit.c $(objects)/.created
+$(objects)/SDL_test_imageBlit.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_imageBlit.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageBlitBlend.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_imageBlitBlend.c $(objects)/.created
+$(objects)/SDL_test_imageBlitBlend.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_imageBlitBlend.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageFace.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_imageFace.c $(objects)/.created
+$(objects)/SDL_test_imageFace.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_imageFace.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imagePrimitives.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_imagePrimitives.c $(objects)/.created
+$(objects)/SDL_test_imagePrimitives.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_imagePrimitives.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imagePrimitivesBlend.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_imagePrimitivesBlend.c $(objects)/.created
+$(objects)/SDL_test_imagePrimitivesBlend.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_imagePrimitivesBlend.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_log.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_log.c $(objects)/.created
+$(objects)/SDL_test_log.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_log.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_md5.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_md5.c $(objects)/.created
+$(objects)/SDL_test_md5.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_md5.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_memory.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_memory.c $(objects)/.created
+$(objects)/SDL_test_memory.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_memory.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_random.lo: /Users/user-n184/Desktop/LUA/lib/SDL2/src/test/SDL_test_random.c $(objects)/.created
+$(objects)/SDL_test_random.lo: /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/test/SDL_test_random.c $(objects)/.created
 	$(RUN_CMD_CC)$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 

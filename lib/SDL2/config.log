@@ -30,8 +30,8 @@ Kernel configured for up to 16 processors.
 Processor type: x86_64h (Intel x86-64h Haswell)
 Processors active: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 Primary memory available: 16.00 gigabytes
-Default processor set: 542 tasks, 4472 threads, 16 processors
-Load average: 1.59, Mach factor: 14.40
+Default processor set: 500 tasks, 3824 threads, 16 processors
+Load average: 0.98, Mach factor: 15.01
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -132,7 +132,7 @@ configure:4376: checking the name lister (/usr/bin/nm -B) interface
 configure:4383: gcc -c -g -O2  conftest.c >&5
 configure:4386: /usr/bin/nm -B "conftest.o"
 configure:4389: output
-000000000000022c S _some_variable
+0000000000000234 S _some_variable
 configure:4396: result: BSD nm
 configure:4399: checking whether ln -s works
 configure:4403: result: yes
@@ -514,23 +514,23 @@ configure:15854: result: yes
 configure:15916: checking for pkg-config
 configure:15949: result: no
 configure:16113: checking for an ANSI C-conforming const
-configure:16179: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16179: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16179: $? = 0
 configure:16186: result: yes
 configure:16194: checking for inline
-configure:16210: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16210: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16210: $? = 0
 configure:16218: result: inline
 configure:16236: checking for working volatile
-configure:16255: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16255: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16255: $? = 0
 configure:16262: result: yes
 configure:16315: checking for GCC -MMD -MT option
-configure:16333: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16333: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16333: $? = 0
 configure:16339: result: yes
 configure:16347: checking for linker option --no-undefined
-configure:16370: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Wl,--no-undefined conftest.c  >&5
+configure:16370: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Wl,--no-undefined conftest.c  >&5
 ld: unknown option: --no-undefined
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:16370: $? = 1
@@ -567,7 +567,7 @@ configure: failed program was:
 | }
 configure:16381: result: no
 configure:16384: checking for linker option --dynamicbase
-configure:16404: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Wl,--dynamicbase conftest.c  >&5
+configure:16404: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Wl,--dynamicbase conftest.c  >&5
 ld: unknown option: --dynamicbase
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:16404: $? = 1
@@ -604,7 +604,7 @@ configure: failed program was:
 | }
 configure:16415: result: no
 configure:16418: checking for linker option --nxcompat
-configure:16438: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Wl,--nxcompat conftest.c  >&5
+configure:16438: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Wl,--nxcompat conftest.c  >&5
 ld: unknown option: --nxcompat
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:16438: $? = 1
@@ -641,7 +641,7 @@ configure: failed program was:
 | }
 configure:16449: result: no
 configure:16452: checking for linker option --high-entropy-va
-configure:16472: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Wl,--high-entropy-va conftest.c  >&5
+configure:16472: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Wl,--high-entropy-va conftest.c  >&5
 ld: unknown option: --high-entropy-va
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:16472: $? = 1
@@ -682,11 +682,11 @@ configure:16602: result: yes
 configure:16613: checking for sys/types.h
 configure:16613: result: yes
 configure:16613: checking stdio.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking stdio.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for stdio.h
@@ -694,27 +694,27 @@ configure:16613: result: yes
 configure:16613: checking for stdlib.h
 configure:16613: result: yes
 configure:16613: checking stddef.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking stddef.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for stddef.h
 configure:16613: result: yes
 configure:16613: checking stdarg.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking stdarg.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for stdarg.h
 configure:16613: result: yes
 configure:16613: checking malloc.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 conftest.c:61:10: fatal error: 'malloc.h' file not found
 #include <malloc.h>
          ^~~~~~~~~~
@@ -784,7 +784,7 @@ configure: failed program was:
 | #include <malloc.h>
 configure:16613: result: no
 configure:16613: checking malloc.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 conftest.c:28:10: fatal error: 'malloc.h' file not found
 #include <malloc.h>
          ^~~~~~~~~~
@@ -829,11 +829,11 @@ configure:16613: result: yes
 configure:16613: checking for strings.h
 configure:16613: result: yes
 configure:16613: checking wchar.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking wchar.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for wchar.h
@@ -843,69 +843,69 @@ configure:16613: result: yes
 configure:16613: checking for stdint.h
 configure:16613: result: yes
 configure:16613: checking limits.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking limits.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for limits.h
 configure:16613: result: yes
 configure:16613: checking ctype.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking ctype.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for ctype.h
 configure:16613: result: yes
 configure:16613: checking math.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking math.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for math.h
 configure:16613: result: yes
 configure:16613: checking float.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking float.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for float.h
 configure:16613: result: yes
 configure:16613: checking iconv.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking iconv.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for iconv.h
 configure:16613: result: yes
 configure:16613: checking signal.h usability
-configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16613: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking signal.h presence
-configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:16613: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:16613: $? = 0
 configure:16613: result: yes
 configure:16613: checking for signal.h
 configure:16613: result: yes
 configure:16624: checking for size_t
-configure:16624: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16624: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:16624: $? = 0
-configure:16624: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:16624: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 conftest.c:76:21: error: expected expression
 if (sizeof ((size_t)))
                     ^
@@ -996,33 +996,33 @@ configure:16624: result: yes
 configure:16636: checking for M_PI in math.h
 configure:16660: result: yes
 configure:16675: checking for working alloca.h
-configure:16692: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:16692: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:16692: $? = 0
 configure:16700: result: yes
 configure:16708: checking for alloca
-configure:16745: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:16745: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:16745: $? = 0
 configure:16753: result: yes
 configure:16862: checking for working memcmp
-configure:16905: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:16905: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:16905: $? = 0
 configure:16905: ./conftest
 configure:16905: $? = 0
 configure:16915: result: yes
 configure:16929: checking for working strtod
-configure:16970: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:16970: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:16970: $? = 0
 configure:16970: ./conftest
 configure:16970: $? = 0
 configure:16980: result: yes
 configure:17047: checking for mprotect
-configure:17047: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17047: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17047: $? = 0
 configure:17047: result: yes
-configure:17064: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17064: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:17064: $? = 0
 configure:17077: checking for malloc
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:69:6: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
 char malloc ();
      ^
@@ -1031,7 +1031,7 @@ conftest.c:69:6: note: 'malloc' is a builtin with type 'void *(unsigned long)'
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for calloc
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:70:6: warning: incompatible redeclaration of library function 'calloc' [-Wincompatible-library-redeclaration]
 char calloc ();
      ^
@@ -1040,7 +1040,7 @@ conftest.c:70:6: note: 'calloc' is a builtin with type 'void *(unsigned long, un
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for realloc
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:71:6: warning: incompatible redeclaration of library function 'realloc' [-Wincompatible-library-redeclaration]
 char realloc ();
      ^
@@ -1049,31 +1049,31 @@ conftest.c:71:6: note: 'realloc' is a builtin with type 'void *(void *, unsigned
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for free
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for getenv
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for setenv
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for putenv
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for unsetenv
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for qsort
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for abs
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:78:6: warning: incompatible redeclaration of library function 'abs' [-Wincompatible-library-redeclaration]
 char abs ();
      ^
@@ -1082,11 +1082,11 @@ conftest.c:78:6: note: 'abs' is a builtin with type 'int (int)'
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for bcopy
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for memset
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:80:6: warning: incompatible redeclaration of library function 'memset' [-Wincompatible-library-redeclaration]
 char memset ();
      ^
@@ -1095,7 +1095,7 @@ conftest.c:80:6: note: 'memset' is a builtin with type 'void *(void *, int, unsi
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for memcpy
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:81:6: warning: incompatible redeclaration of library function 'memcpy' [-Wincompatible-library-redeclaration]
 char memcpy ();
      ^
@@ -1104,7 +1104,7 @@ conftest.c:81:6: note: 'memcpy' is a builtin with type 'void *(void *, const voi
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for memmove
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:82:6: warning: incompatible redeclaration of library function 'memmove' [-Wincompatible-library-redeclaration]
 char memmove ();
      ^
@@ -1113,7 +1113,7 @@ conftest.c:82:6: note: 'memmove' is a builtin with type 'void *(void *, const vo
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for wcslen
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:83:6: warning: incompatible redeclaration of library function 'wcslen' [-Wincompatible-library-redeclaration]
 char wcslen ();
      ^
@@ -1122,23 +1122,23 @@ conftest.c:83:6: note: 'wcslen' is a builtin with type 'unsigned long (const int
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for wcslcpy
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for wcslcat
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for wcsdup
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for wcsstr
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for wcscmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:88:6: warning: incompatible redeclaration of library function 'wcscmp' [-Wincompatible-library-redeclaration]
 char wcscmp ();
      ^
@@ -1147,7 +1147,7 @@ conftest.c:88:6: note: 'wcscmp' is a builtin with type 'int (const int *, const 
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for wcsncmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:89:6: warning: incompatible redeclaration of library function 'wcsncmp' [-Wincompatible-library-redeclaration]
 char wcsncmp ();
      ^
@@ -1156,14 +1156,14 @@ conftest.c:89:6: note: 'wcsncmp' is a builtin with type 'int (const int *, const
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for wcscasecmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for _wcsicmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__wcsicmp", referenced from:
-      _main in conftest-45e7cb.o
+      _main in conftest-736134.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -1275,14 +1275,14 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for wcsncasecmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for _wcsnicmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__wcsnicmp", referenced from:
-      _main in conftest-585447.o
+      _main in conftest-a24ceb.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -1395,7 +1395,7 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for strlen
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:92:6: warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
 char strlen ();
      ^
@@ -1404,7 +1404,7 @@ conftest.c:92:6: note: 'strlen' is a builtin with type 'unsigned long (const cha
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strlcpy
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:93:6: warning: incompatible redeclaration of library function 'strlcpy' [-Wincompatible-library-redeclaration]
 char strlcpy ();
      ^
@@ -1413,7 +1413,7 @@ conftest.c:93:6: note: 'strlcpy' is a builtin with type 'unsigned long (char *, 
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strlcat
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:94:6: warning: incompatible redeclaration of library function 'strlcat' [-Wincompatible-library-redeclaration]
 char strlcat ();
      ^
@@ -1422,10 +1422,10 @@ conftest.c:94:6: note: 'strlcat' is a builtin with type 'unsigned long (char *, 
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for _strrev
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__strrev", referenced from:
-      _main in conftest-49f25b.o
+      _main in conftest-4abd9b.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -1541,10 +1541,10 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for _strupr
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__strupr", referenced from:
-      _main in conftest-400493.o
+      _main in conftest-eea7bd.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -1660,10 +1660,10 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for _strlwr
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__strlwr", referenced from:
-      _main in conftest-4ea30e.o
+      _main in conftest-0c66a6.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -1779,7 +1779,7 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for strchr
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:95:6: warning: incompatible redeclaration of library function 'strchr' [-Wincompatible-library-redeclaration]
 char strchr ();
      ^
@@ -1788,7 +1788,7 @@ conftest.c:95:6: note: 'strchr' is a builtin with type 'char *(const char *, int
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strrchr
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:96:6: warning: incompatible redeclaration of library function 'strrchr' [-Wincompatible-library-redeclaration]
 char strrchr ();
      ^
@@ -1797,7 +1797,7 @@ conftest.c:96:6: note: 'strrchr' is a builtin with type 'char *(const char *, in
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strstr
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:97:6: warning: incompatible redeclaration of library function 'strstr' [-Wincompatible-library-redeclaration]
 char strstr ();
      ^
@@ -1806,14 +1806,14 @@ conftest.c:97:6: note: 'strstr' is a builtin with type 'char *(const char *, con
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strtok_r
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for itoa
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_itoa", referenced from:
-      _main in conftest-bd989c.o
+      _main in conftest-a9d803.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -1933,10 +1933,10 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for _ltoa
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__ltoa", referenced from:
-      _main in conftest-07b206.o
+      _main in conftest-ba3aa3.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -2056,10 +2056,10 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for _uitoa
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__uitoa", referenced from:
-      _main in conftest-36d1a1.o
+      _main in conftest-253590.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -2179,10 +2179,10 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for _ultoa
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__ultoa", referenced from:
-      _main in conftest-0b7d92.o
+      _main in conftest-40e93d.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -2302,7 +2302,7 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for strtol
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:99:6: warning: incompatible redeclaration of library function 'strtol' [-Wincompatible-library-redeclaration]
 char strtol ();
      ^
@@ -2311,7 +2311,7 @@ conftest.c:99:6: note: 'strtol' is a builtin with type 'long (const char *, char
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strtoul
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:100:6: warning: incompatible redeclaration of library function 'strtoul' [-Wincompatible-library-redeclaration]
 char strtoul ();
      ^
@@ -2320,10 +2320,10 @@ conftest.c:100:6: note: 'strtoul' is a builtin with type 'unsigned long (const c
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for _i64toa
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__i64toa", referenced from:
-      _main in conftest-1ef6c8.o
+      _main in conftest-c8c7c7.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -2445,10 +2445,10 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for _ui64toa
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__ui64toa", referenced from:
-      _main in conftest-5c888a.o
+      _main in conftest-8ba880.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -2570,7 +2570,7 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for strtoll
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:101:6: warning: incompatible redeclaration of library function 'strtoll' [-Wincompatible-library-redeclaration]
 char strtoll ();
      ^
@@ -2579,7 +2579,7 @@ conftest.c:101:6: note: 'strtoll' is a builtin with type 'long long (const char 
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strtoull
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:102:6: warning: incompatible redeclaration of library function 'strtoull' [-Wincompatible-library-redeclaration]
 char strtoull ();
      ^
@@ -2588,15 +2588,15 @@ conftest.c:102:6: note: 'strtoull' is a builtin with type 'unsigned long long (c
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for atoi
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for atof
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strcmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:105:6: warning: incompatible redeclaration of library function 'strcmp' [-Wincompatible-library-redeclaration]
 char strcmp ();
      ^
@@ -2605,7 +2605,7 @@ conftest.c:105:6: note: 'strcmp' is a builtin with type 'int (const char *, cons
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for strncmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:106:6: warning: incompatible redeclaration of library function 'strncmp' [-Wincompatible-library-redeclaration]
 char strncmp ();
      ^
@@ -2614,10 +2614,10 @@ conftest.c:106:6: note: 'strncmp' is a builtin with type 'int (const char *, con
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for _stricmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__stricmp", referenced from:
-      _main in conftest-43c027.o
+      _main in conftest-07e639.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -2745,7 +2745,7 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for strcasecmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:107:6: warning: incompatible redeclaration of library function 'strcasecmp' [-Wincompatible-library-redeclaration]
 char strcasecmp ();
      ^
@@ -2754,10 +2754,10 @@ conftest.c:107:6: note: 'strcasecmp' is a builtin with type 'int (const char *, 
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for _strnicmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "__strnicmp", referenced from:
-      _main in conftest-3fd9a8.o
+      _main in conftest-3037ee.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -2886,7 +2886,7 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for strncasecmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:108:6: warning: incompatible redeclaration of library function 'strncasecmp' [-Wincompatible-library-redeclaration]
 char strncasecmp ();
      ^
@@ -2895,7 +2895,7 @@ conftest.c:108:6: note: 'strncasecmp' is a builtin with type 'int (const char *,
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for vsscanf
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:109:6: warning: incompatible redeclaration of library function 'vsscanf' [-Wincompatible-library-redeclaration]
 char vsscanf ();
      ^
@@ -2904,7 +2904,7 @@ conftest.c:109:6: note: 'vsscanf' is a builtin with type 'int (const char *restr
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for vsnprintf
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:110:6: warning: incompatible redeclaration of library function 'vsnprintf' [-Wincompatible-library-redeclaration]
 char vsnprintf ();
      ^
@@ -2913,10 +2913,10 @@ conftest.c:110:6: note: 'vsnprintf' is a builtin with type 'int (char *, unsigne
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for fopen64
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_fopen64", referenced from:
-      _main in conftest-d65d61.o
+      _main in conftest-ae06c6.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -3048,14 +3048,14 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for fseeko
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for fseeko64
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_fseeko64", referenced from:
-      _main in conftest-8bdc24.o
+      _main in conftest-160308.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -3188,11 +3188,11 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for sigaction
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for setjmp
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:113:6: warning: declaration of built-in function 'setjmp' requires the declaration of the 'jmp_buf' type, commonly provided in the header <setjmp.h>. [-Wincomplete-setjmp-declaration]
 char setjmp ();
      ^
@@ -3200,22 +3200,22 @@ char setjmp ();
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for nanosleep
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for sysconf
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for sysctlbyname
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for getauxval
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_getauxval", referenced from:
-      _main in conftest-bc3f3a.o
+      _main in conftest-e6d9c5.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -3353,10 +3353,10 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for elf_aux_info
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 Undefined symbols for architecture x86_64:
   "_elf_aux_info", referenced from:
-      _main in conftest-441e06.o
+      _main in conftest-53c6d5.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:17077: $? = 1
@@ -3494,11 +3494,11 @@ configure: failed program was:
 | }
 configure:17077: result: no
 configure:17077: checking for poll
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17077: checking for _Exit
-configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  >&5
+configure:17077: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  >&5
 conftest.c:118:6: warning: incompatible redeclaration of library function '_Exit' [-Wincompatible-library-redeclaration]
 char _Exit ();
      ^
@@ -3507,7 +3507,7 @@ conftest.c:118:6: note: '_Exit' is a builtin with type 'void (int) __attribute__
 configure:17077: $? = 0
 configure:17077: result: yes
 configure:17087: checking for pow in -lm
-configure:17112: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c -lm   >&5
+configure:17112: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c -lm   >&5
 conftest.c:103:6: warning: incompatible redeclaration of library function 'pow' [-Wincompatible-library-redeclaration]
 char pow ();
      ^
@@ -3516,7 +3516,7 @@ conftest.c:103:6: note: 'pow' is a builtin with type 'double (double, double)'
 configure:17112: $? = 0
 configure:17121: result: yes
 configure:17130: checking for acos
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:119:6: warning: incompatible redeclaration of library function 'acos' [-Wincompatible-library-redeclaration]
 char acos ();
      ^
@@ -3525,7 +3525,7 @@ conftest.c:119:6: note: 'acos' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for acosf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:120:6: warning: incompatible redeclaration of library function 'acosf' [-Wincompatible-library-redeclaration]
 char acosf ();
      ^
@@ -3534,7 +3534,7 @@ conftest.c:120:6: note: 'acosf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for asin
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:121:6: warning: incompatible redeclaration of library function 'asin' [-Wincompatible-library-redeclaration]
 char asin ();
      ^
@@ -3543,7 +3543,7 @@ conftest.c:121:6: note: 'asin' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for asinf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:122:6: warning: incompatible redeclaration of library function 'asinf' [-Wincompatible-library-redeclaration]
 char asinf ();
      ^
@@ -3552,7 +3552,7 @@ conftest.c:122:6: note: 'asinf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for atan
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:123:6: warning: incompatible redeclaration of library function 'atan' [-Wincompatible-library-redeclaration]
 char atan ();
      ^
@@ -3561,7 +3561,7 @@ conftest.c:123:6: note: 'atan' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for atanf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:124:6: warning: incompatible redeclaration of library function 'atanf' [-Wincompatible-library-redeclaration]
 char atanf ();
      ^
@@ -3570,7 +3570,7 @@ conftest.c:124:6: note: 'atanf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for atan2
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:125:6: warning: incompatible redeclaration of library function 'atan2' [-Wincompatible-library-redeclaration]
 char atan2 ();
      ^
@@ -3579,7 +3579,7 @@ conftest.c:125:6: note: 'atan2' is a builtin with type 'double (double, double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for atan2f
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:126:6: warning: incompatible redeclaration of library function 'atan2f' [-Wincompatible-library-redeclaration]
 char atan2f ();
      ^
@@ -3588,7 +3588,7 @@ conftest.c:126:6: note: 'atan2f' is a builtin with type 'float (float, float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for ceil
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:127:6: warning: incompatible redeclaration of library function 'ceil' [-Wincompatible-library-redeclaration]
 char ceil ();
      ^
@@ -3597,7 +3597,7 @@ conftest.c:127:6: note: 'ceil' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for ceilf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:128:6: warning: incompatible redeclaration of library function 'ceilf' [-Wincompatible-library-redeclaration]
 char ceilf ();
      ^
@@ -3606,7 +3606,7 @@ conftest.c:128:6: note: 'ceilf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for copysign
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:129:6: warning: incompatible redeclaration of library function 'copysign' [-Wincompatible-library-redeclaration]
 char copysign ();
      ^
@@ -3615,7 +3615,7 @@ conftest.c:129:6: note: 'copysign' is a builtin with type 'double (double, doubl
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for copysignf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:130:6: warning: incompatible redeclaration of library function 'copysignf' [-Wincompatible-library-redeclaration]
 char copysignf ();
      ^
@@ -3624,7 +3624,7 @@ conftest.c:130:6: note: 'copysignf' is a builtin with type 'float (float, float)
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for cos
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:131:6: warning: incompatible redeclaration of library function 'cos' [-Wincompatible-library-redeclaration]
 char cos ();
      ^
@@ -3633,7 +3633,7 @@ conftest.c:131:6: note: 'cos' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for cosf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:132:6: warning: incompatible redeclaration of library function 'cosf' [-Wincompatible-library-redeclaration]
 char cosf ();
      ^
@@ -3642,7 +3642,7 @@ conftest.c:132:6: note: 'cosf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for exp
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:133:6: warning: incompatible redeclaration of library function 'exp' [-Wincompatible-library-redeclaration]
 char exp ();
      ^
@@ -3651,7 +3651,7 @@ conftest.c:133:6: note: 'exp' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for expf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:134:6: warning: incompatible redeclaration of library function 'expf' [-Wincompatible-library-redeclaration]
 char expf ();
      ^
@@ -3660,7 +3660,7 @@ conftest.c:134:6: note: 'expf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for fabs
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:135:6: warning: incompatible redeclaration of library function 'fabs' [-Wincompatible-library-redeclaration]
 char fabs ();
      ^
@@ -3669,7 +3669,7 @@ conftest.c:135:6: note: 'fabs' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for fabsf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:136:6: warning: incompatible redeclaration of library function 'fabsf' [-Wincompatible-library-redeclaration]
 char fabsf ();
      ^
@@ -3678,7 +3678,7 @@ conftest.c:136:6: note: 'fabsf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for floor
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:137:6: warning: incompatible redeclaration of library function 'floor' [-Wincompatible-library-redeclaration]
 char floor ();
      ^
@@ -3687,7 +3687,7 @@ conftest.c:137:6: note: 'floor' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for floorf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:138:6: warning: incompatible redeclaration of library function 'floorf' [-Wincompatible-library-redeclaration]
 char floorf ();
      ^
@@ -3696,7 +3696,7 @@ conftest.c:138:6: note: 'floorf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for trunc
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:139:6: warning: incompatible redeclaration of library function 'trunc' [-Wincompatible-library-redeclaration]
 char trunc ();
      ^
@@ -3705,7 +3705,7 @@ conftest.c:139:6: note: 'trunc' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for truncf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:140:6: warning: incompatible redeclaration of library function 'truncf' [-Wincompatible-library-redeclaration]
 char truncf ();
      ^
@@ -3714,7 +3714,7 @@ conftest.c:140:6: note: 'truncf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for fmod
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:141:6: warning: incompatible redeclaration of library function 'fmod' [-Wincompatible-library-redeclaration]
 char fmod ();
      ^
@@ -3723,7 +3723,7 @@ conftest.c:141:6: note: 'fmod' is a builtin with type 'double (double, double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for fmodf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:142:6: warning: incompatible redeclaration of library function 'fmodf' [-Wincompatible-library-redeclaration]
 char fmodf ();
      ^
@@ -3732,7 +3732,7 @@ conftest.c:142:6: note: 'fmodf' is a builtin with type 'float (float, float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for log
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:143:6: warning: incompatible redeclaration of library function 'log' [-Wincompatible-library-redeclaration]
 char log ();
      ^
@@ -3741,7 +3741,7 @@ conftest.c:143:6: note: 'log' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for logf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:144:6: warning: incompatible redeclaration of library function 'logf' [-Wincompatible-library-redeclaration]
 char logf ();
      ^
@@ -3750,7 +3750,7 @@ conftest.c:144:6: note: 'logf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for log10
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:145:6: warning: incompatible redeclaration of library function 'log10' [-Wincompatible-library-redeclaration]
 char log10 ();
      ^
@@ -3759,7 +3759,7 @@ conftest.c:145:6: note: 'log10' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for log10f
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:146:6: warning: incompatible redeclaration of library function 'log10f' [-Wincompatible-library-redeclaration]
 char log10f ();
      ^
@@ -3768,7 +3768,7 @@ conftest.c:146:6: note: 'log10f' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for pow
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:147:6: warning: incompatible redeclaration of library function 'pow' [-Wincompatible-library-redeclaration]
 char pow ();
      ^
@@ -3777,7 +3777,7 @@ conftest.c:147:6: note: 'pow' is a builtin with type 'double (double, double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for powf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:148:6: warning: incompatible redeclaration of library function 'powf' [-Wincompatible-library-redeclaration]
 char powf ();
      ^
@@ -3786,7 +3786,7 @@ conftest.c:148:6: note: 'powf' is a builtin with type 'float (float, float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for scalbn
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:149:6: warning: incompatible redeclaration of library function 'scalbn' [-Wincompatible-library-redeclaration]
 char scalbn ();
      ^
@@ -3795,7 +3795,7 @@ conftest.c:149:6: note: 'scalbn' is a builtin with type 'double (double, int)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for scalbnf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:150:6: warning: incompatible redeclaration of library function 'scalbnf' [-Wincompatible-library-redeclaration]
 char scalbnf ();
      ^
@@ -3804,7 +3804,7 @@ conftest.c:150:6: note: 'scalbnf' is a builtin with type 'float (float, int)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for sin
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:151:6: warning: incompatible redeclaration of library function 'sin' [-Wincompatible-library-redeclaration]
 char sin ();
      ^
@@ -3813,7 +3813,7 @@ conftest.c:151:6: note: 'sin' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for sinf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:152:6: warning: incompatible redeclaration of library function 'sinf' [-Wincompatible-library-redeclaration]
 char sinf ();
      ^
@@ -3822,7 +3822,7 @@ conftest.c:152:6: note: 'sinf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for sqrt
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:153:6: warning: incompatible redeclaration of library function 'sqrt' [-Wincompatible-library-redeclaration]
 char sqrt ();
      ^
@@ -3831,7 +3831,7 @@ conftest.c:153:6: note: 'sqrt' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for sqrtf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:154:6: warning: incompatible redeclaration of library function 'sqrtf' [-Wincompatible-library-redeclaration]
 char sqrtf ();
      ^
@@ -3840,7 +3840,7 @@ conftest.c:154:6: note: 'sqrtf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for tan
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:155:6: warning: incompatible redeclaration of library function 'tan' [-Wincompatible-library-redeclaration]
 char tan ();
      ^
@@ -3849,7 +3849,7 @@ conftest.c:155:6: note: 'tan' is a builtin with type 'double (double)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17130: checking for tanf
-configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
+configure:17130: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm >&5
 conftest.c:156:6: warning: incompatible redeclaration of library function 'tanf' [-Wincompatible-library-redeclaration]
 char tanf ();
      ^
@@ -3858,63 +3858,63 @@ conftest.c:156:6: note: 'tanf' is a builtin with type 'float (float)'
 configure:17130: $? = 0
 configure:17130: result: yes
 configure:17140: checking for iconv_open in -liconv
-configure:17165: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c -liconv   -lm >&5
+configure:17165: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c -liconv   -lm >&5
 configure:17165: $? = 0
 configure:17174: result: yes
 configure:17182: checking for iconv
-configure:17182: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv >&5
+configure:17182: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv >&5
 configure:17182: $? = 0
 configure:17182: result: yes
 configure:17192: checking for struct sigaction.sa_sigaction
-configure:17192: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17192: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:17192: $? = 0
 configure:17192: result: yes
 configure:17203: checking libunwind.h usability
-configure:17203: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17203: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:17203: $? = 0
 configure:17203: result: yes
 configure:17203: checking libunwind.h presence
-configure:17203: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:17203: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:17203: $? = 0
 configure:17203: result: yes
 configure:17203: checking for libunwind.h
 configure:17203: result: yes
 configure:17225: checking for GCC builtin atomic operations
-configure:17247: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv >&5
+configure:17247: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv >&5
 configure:17247: $? = 0
 configure:17254: result: yes
 configure:17581: checking for GCC -mmmx option
-configure:17612: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -mmmx  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17612: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -mmmx  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:17612: $? = 0
 configure:17618: result: yes
 configure:17638: checking for GCC -m3dnow option
-configure:17662: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -m3dnow  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv >&5
+configure:17662: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -m3dnow  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv >&5
 configure:17662: $? = 0
 configure:17669: result: yes
 configure:17689: checking for GCC -msse option
-configure:17720: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -msse  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17720: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -msse  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:17720: $? = 0
 configure:17726: result: yes
 configure:17746: checking for GCC -msse2 option
-configure:17777: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -msse2  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17777: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -msse2  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:17777: $? = 0
 configure:17783: result: yes
 configure:17803: checking for GCC -msse3 option
-configure:17834: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -msse3  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17834: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -msse3  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:17834: $? = 0
 configure:17840: result: yes
 configure:17850: checking immintrin.h usability
-configure:17850: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17850: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:17850: $? = 0
 configure:17850: result: yes
 configure:17850: checking immintrin.h presence
-configure:17850: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:17850: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 configure:17850: $? = 0
 configure:17850: result: yes
 configure:17850: checking for immintrin.h
 configure:17850: result: yes
 configure:17878: checking for Altivec with GCC altivec.h and -maltivec option
-configure:17897: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -maltivec  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17897: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -maltivec  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 clang: warning: argument unused during compilation: '-maltivec' [-Wunused-command-line-argument]
 In file included from conftest.c:141:
 /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/altivec.h:13:2: error: "AltiVec support not enabled"
@@ -4136,7 +4136,7 @@ configure: failed program was:
 | }
 configure:17904: result: no
 configure:17908: checking for Altivec with GCC -maltivec option
-configure:17926: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -maltivec  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17926: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -maltivec  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 clang: warning: argument unused during compilation: '-maltivec' [-Wunused-command-line-argument]
 conftest.c:141:13: error: unknown type name 'vector'
             vector unsigned int vzero() {
@@ -4301,7 +4301,7 @@ configure: failed program was:
 | }
 configure:17932: result: no
 configure:17937: checking for Altivec with GCC altivec.h and -faltivec option
-configure:17958: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -faltivec  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17958: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -faltivec  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 clang: error: the clang compiler does not support 'faltivec', please use -maltivec and include altivec.h explicitly
 configure:17958: $? = 1
 configure: failed program was:
@@ -4460,7 +4460,7 @@ configure: failed program was:
 | }
 configure:17965: result: no
 configure:17970: checking for Altivec with GCC -faltivec option
-configure:17988: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -faltivec  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:17988: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -faltivec  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 clang: error: the clang compiler does not support 'faltivec', please use -maltivec and include altivec.h explicitly
 configure:17988: $? = 1
 configure: failed program was:
@@ -4618,41 +4618,41 @@ configure: failed program was:
 | }
 configure:17994: result: no
 configure:19714: checking for GCC -Wall option
-configure:19734: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -Wall  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:19734: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -Wall  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:19734: $? = 0
 configure:19740: result: yes
 configure:19747: checking for necessary GCC -Wno-multichar option
 configure:19755: result: no
 configure:19603: checking for GCC -fno-strict-aliasing option
-configure:19623: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -fno-strict-aliasing  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:19623: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -fno-strict-aliasing  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:19623: $? = 0
 configure:19629: result: yes
 configure:19563: checking for GCC -fvisibility=hidden option
-configure:19586: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -fvisibility=hidden -Werror  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:19586: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -fvisibility=hidden -Werror  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:19586: $? = 0
 configure:19592: result: yes
 configure:19677: checking for GCC -Wdeclaration-after-statement option
-configure:19697: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -Wdeclaration-after-statement -Werror=declaration-after-statement  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:19697: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -Wdeclaration-after-statement -Werror=declaration-after-statement  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:19697: $? = 0
 configure:19703: result: yes
 configure:23876: checking for dlopen
-configure:23895: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:23895: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:23895: $? = 0
 configure:23901: result: yes
 configure:23905: checking for dlopen in -lc
-configure:23930: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c -lc   -lm -liconv >&5
+configure:23930: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c -lc   -lm -liconv >&5
 configure:23930: $? = 0
 configure:23939: result: yes
 configure:21701: checking for Cocoa framework
-configure:21718: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -x objective-c  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:21718: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -x objective-c  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:21718: $? = 0
 configure:21724: result: yes
 configure:21757: checking for Metal framework
-configure:21780: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -x objective-c  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:21780: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -x objective-c  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:21780: $? = 0
 configure:21787: result: yes
 configure:20094: checking for X
-configure:20204: gcc -E  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c
+configure:20204: gcc -E  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c
 conftest.c:147:10: fatal error: 'X11/Xlib.h' file not found
 #include <X11/Xlib.h>
          ^~~~~~~~~~~~
@@ -4806,7 +4806,7 @@ configure: failed program was:
 | #define SDL_VIDEO_RENDER_METAL 1
 | /* end confdefs.h.  */
 | #include <X11/Xlib.h>
-configure:20235: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c -lX11  -lm -liconv >&5
+configure:20235: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c -lX11  -lm -liconv >&5
 conftest.c:147:10: fatal error: 'X11/Xlib.h' file not found
 #include <X11/Xlib.h>
          ^~~~~~~~~~~~
@@ -4969,7 +4969,7 @@ configure: failed program was:
 | }
 configure:20274: result: no
 configure:22223: checking for OpenGL (GLX) support
-configure:22241: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:22241: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 conftest.c:155:19: fatal error: 'GL/gl.h' file not found
          #include <GL/gl.h>
                   ^~~~~~~~~
@@ -5142,22 +5142,22 @@ configure: failed program was:
 |   return 0;
 | }
 configure:22247: result: no
-configure:22684: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -x objective-c  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:22684: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -x objective-c  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:22684: $? = 0
 configure:23335: checking for pthreads
-configure:23354: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
+configure:23354: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
 configure:23354: $? = 0
 configure:23361: result: yes
 configure:23381: checking for recursive mutexes
-configure:23402: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
+configure:23402: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
 configure:23402: $? = 0
 configure:23442: result: yes
 configure:23447: checking for pthread semaphores
-configure:23465: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:23465: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 configure:23465: $? = 0
 configure:23471: result: yes
 configure:23475: checking for sem_timedwait
-configure:23494: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
+configure:23494: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
 conftest.c:165:19: error: implicit declaration of function 'sem_timedwait' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                   sem_timedwait(NULL, NULL);
                   ^
@@ -5339,7 +5339,7 @@ configure: failed program was:
 | }
 configure:23504: result: no
 configure:23508: checking for pthread_np.h
-configure:23508: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  conftest.c >&5
+configure:23508: gcc -c -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  conftest.c >&5
 conftest.c:159:10: fatal error: 'pthread_np.h' file not found
 #include <pthread_np.h>
          ^~~~~~~~~~~~~~
@@ -5507,14 +5507,14 @@ configure: failed program was:
 | #include <pthread_np.h>
 configure:23508: result: no
 configure:23524: checking for pthread_setname_np
-configure:23544: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
+configure:23544: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
 configure:23544: $? = 0
 configure:23558: result: yes
 configure:23561: checking for pthread_set_name_np
-configure:23581: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
+configure:23581: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -D_THREAD_SAFE  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   conftest.c  -lm -liconv  >&5
 Undefined symbols for architecture x86_64:
   "_pthread_set_name_np", referenced from:
-      _main in conftest-d59f57.o
+      _main in conftest-6e537c.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:23581: $? = 1
@@ -5695,7 +5695,7 @@ configure:23595: result: no
 configure:24505: checking for hidapi support
 configure:24507: result: yes
 configure:23196: checking for GameController framework
-configure:23221: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -x objective-c -fobjc-weak  -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos   -Wl,-weak_framework,CoreHaptics -Wl,-weak_framework,GameController conftest.c  -lm -liconv >&5
+configure:23221: gcc -o conftest -g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -x objective-c -fobjc-weak  -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos   -Wl,-weak_framework,CoreHaptics -Wl,-weak_framework,GameController conftest.c  -lm -liconv >&5
 configure:23221: $? = 0
 configure:23231: result: yes
 configure:25632: checking whether to install sdl2-config
@@ -5717,17 +5717,17 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on MacBook-Pro-admin-5.local
 
-config.status:1414: creating Makefile
-config.status:1414: creating sdl2-config
-config.status:1414: creating sdl2-config.cmake
-config.status:1414: creating sdl2-config-version.cmake
-config.status:1414: creating SDL2.spec
-config.status:1414: creating sdl2.pc
-config.status:1414: creating include/SDL_config.h
-config.status:1574: include/SDL_config.h is unchanged
-config.status:1588: executing libtool commands
-config.status:1588: executing sdl2_config commands
-config.status:1588: executing summary commands
+config.status:1416: creating Makefile
+config.status:1416: creating sdl2-config
+config.status:1416: creating sdl2-config.cmake
+config.status:1416: creating sdl2-config-version.cmake
+config.status:1416: creating SDL2.spec
+config.status:1416: creating sdl2.pc
+config.status:1416: creating include/SDL_config.h
+config.status:1576: include/SDL_config.h is unchanged
+config.status:1590: executing libtool commands
+config.status:1590: executing sdl2_config commands
+config.status:1590: executing summary commands
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -6029,9 +6029,9 @@ AWK='awk'
 BUILD_CFLAGS='-g -O3 -DUSING_GENERATED_CONFIG_H'
 BUILD_LDFLAGS=''
 CC='gcc'
-CFLAGS='-g -O2 -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos '
+CFLAGS='-g -O2 -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos '
 CPP='gcc -E'
-CPPFLAGS=' -Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos '
+CPPFLAGS=' -Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos '
 CXX='g++'
 CXXCPP='g++ -E'
 CXXFLAGS='-g -O2'
@@ -6055,7 +6055,7 @@ ESD_CFLAGS=''
 ESD_CONFIG=''
 ESD_LIBS=''
 EXEEXT=''
-EXTRA_CFLAGS='-Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos  -mmmx -m3dnow -msse -msse2 -msse3 -Wall -fno-strict-aliasing -DTARGET_API_MAC_CARBON -DTARGET_API_MAC_OSX -fvisibility=hidden -Wdeclaration-after-statement -Werror=declaration-after-statement -D_THREAD_SAFE -I/Users/user-n184/Desktop/LUA/lib/SDL2/src/hidapi/hidapi -fobjc-weak -Wno-unused-command-line-argument'
+EXTRA_CFLAGS='-Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos  -mmmx -m3dnow -msse -msse2 -msse3 -Wall -fno-strict-aliasing -DTARGET_API_MAC_CARBON -DTARGET_API_MAC_OSX -fvisibility=hidden -Wdeclaration-after-statement -Werror=declaration-after-statement -D_THREAD_SAFE -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/hidapi/hidapi -fobjc-weak -Wno-unused-command-line-argument'
 EXTRA_LDFLAGS=' -lm -liconv  -Wl,-framework,CoreAudio -Wl,-framework,AudioToolbox -Wl,-weak_framework,CoreHaptics -Wl,-weak_framework,GameController -Wl,-framework,ForceFeedback -lobjc -Wl,-framework,CoreVideo -Wl,-framework,Cocoa -Wl,-framework,Carbon -Wl,-framework,IOKit -Wl,-weak_framework,QuartzCore -Wl,-weak_framework,Metal'
 FGREP='/usr/bin/grep -F'
 FUSIONSOUND_CFLAGS=''
@@ -6065,7 +6065,7 @@ GEN_OBJECTS=''
 GREP='/usr/bin/grep'
 IBUS_CFLAGS=''
 IBUS_LIBS=''
-INCLUDE='-Iinclude -I/Users/user-n184/Desktop/LUA/lib/SDL2/include -idirafter /Users/user-n184/Desktop/LUA/lib/SDL2/src/video/khronos'
+INCLUDE='-Iinclude -I/Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/include -idirafter /Users/user-n184/Desktop/CppLuaEngine/lib/SDL2/src/video/khronos'
 INSTALL_DATA='${INSTALL} -m 644'
 INSTALL_PROGRAM='${INSTALL}'
 INSTALL_SCRIPT='${INSTALL}'
