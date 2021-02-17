@@ -1,8 +1,9 @@
+NAME=MythOfHilda.game
 .PHONY: build
 build:
 	g++ -g -w -std=c++17 \
 	./src/*.cpp \
-	-o game \
+	-o $(NAME) \
 	-I "inc/" \
 	-I "./lib/SDL2_image/" \
 	-I "./lib/SDL2/include/" \
@@ -24,7 +25,7 @@ libs:
 	sh installSDL2.sh
 
 clean:
-	rm game
+	rm $(NAME)
 
 run:
-	@./game;
+	@./$(NAME);

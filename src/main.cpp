@@ -5,18 +5,11 @@
 
 
 
-int main(int argc, char *args[])
+int main(int argc, char *argv[])
 {
-	sol::state lua;
 	Game *game = new Game();
-	game->Init(WINDOW_WIDTH, WINDOW_HEIGHT);
-
-	while(game->IsRunning())
-	{
-		game->ProcessInput();
-		game->Update();
-		game->Render();
-	}
+	game->Init();
+	game->Run();
 	game->Destroy();
 	delete game;
 	return(0);

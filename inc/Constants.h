@@ -3,7 +3,7 @@
 #include "stdint.h"
 
 
-const uint32_t WINDOW_WIDTH = 800;
-const uint32_t WINDOW_HEIGHT = 600;
+const uint32_t GAME_RENDERING_WIDTH = 800;
+const uint32_t GAME_RENDERING_HEIGHT = 600;
 
 #endif

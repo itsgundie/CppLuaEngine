@@ -20,15 +20,21 @@ float projectilePosY = 0.0f;
 float projectileVelX = 5.0f;
 float projectileVelY = 5.0f;
 
-void Game::Init(uint32_t width, uint32_t height)
+void Game::Init()
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
 	{
 		std::cerr << "SDL INIT FAILED :( !" << std::endl;
 		return;
 	}
+	// SDL_DisplayMode displayMode;
+	// SDL_GetCurrentDisplayMode(0, &displayMode);
+	// windowWidth = displayMode.w;
+	// windowHeight = displayMode.h;
+	windowWidth = GAME_RENDERING_WIDTH;
+	windowHeight = GAME_RENDERING_HEIGHT;
 	window = SDL_CreateWindow(GAME_TITLE, SDL_WINDOWPOS_CENTERED, 
-		SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_BORDERLESS);
+		SDL_WINDOWPOS_CENTERED, windowWidth, windowHeight, SDL_WINDOW_BORDERLESS);
 	if (!window)
 	{
 		std::cerr << "SDL WINDOW CREATION FAILED :( !" << std::endl;
@@ -40,30 +46,45 @@ void Game::Init(uint32_t width, uint32_t height)
 		std::cerr << "SDL RENDERER CREATION FAILED :( !" << std::endl;
 		return;
 	}
-
+	SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
 	isRunning = true;
 	return;
 }
 
+void Game::Run()
+{
+	while(this->IsRunning())
+	{
+			this->ProcessInput();
+			this->Update();
+			this->Render();
+	}
+}
+
 void Game::ProcessInput()
 {
-	SDL_Event event;
-	SDL_PollEvent(&event);
-	switch (event.type)
+	SDL_Event sdlEvent;
+	while(SDL_PollEvent(&sdlEvent))
 	{
-		case SDL_QUIT:
+		switch (sdlEvent.type)
 		{
-			isRunning = false;
-			break;
-		}
-		case SDL_KEYDOWN:
-		{
-			if(event.key.keysym.sym == SDLK_ESCAPE)
+			case SDL_QUIT:
+			{
 				isRunning = false;
+				break;
+			}
+			case SDL_KEYDOWN:
+			{
+				if(sdlEvent.key.keysym.sym == SDLK_ESCAPE)
+				{
+					isRunning = false;
+				}
+				break;
+			}
+			default:
+				break;
 		}
-		default:
-			break;
-	}
+	}	
 }
 
 void Game::Update()
@@ -79,13 +100,21 @@ void Game::Render()
 	SDL_SetRenderDrawColor(renderer, 42, 42, 42, 255);
 	SDL_RenderClear(renderer);
 
-	SDL_Rect projectile
-	{
-		(int32_t)projectilePosX, (int32_t)projectilePosY, 10, 10
-	};
+	SDL_Surface *surface = IMG_Load("./assets/images/tank-tiger-right.png");
+	SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
+	SDL_FreeSurface(surface);
 
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-	SDL_RenderFillRect(renderer, &projectile);
+	SDL_Rect dstRect = {10, 10, 32, 32};
+	SDL_RenderCopy(renderer, texture, NULL, &dstRect);
+	SDL_DestroyTexture(texture);
+
+	// SDL_Rect projectile
+	// {
+	// 	(int32_t)projectilePosX, (int32_t)projectilePosY, 10, 10
+	// };
+
+	// SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	// SDL_RenderFillRect(renderer, &projectile);
 	SDL_RenderPresent(renderer);
 }
 

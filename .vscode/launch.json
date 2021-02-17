@@ -8,7 +8,7 @@
             "name": "(lldb) Запустить",
             "type": "cppdbg",
             "request": "launch",
-            "program": "Введите имя программы, например: ${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/MythOfHilda.game",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

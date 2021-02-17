@@ -17,10 +17,13 @@ class Game
         SDL_Window *window;
         SDL_Renderer *renderer;
     public:
+        uint32_t windowWidth;
+        uint32_t windowHeight;
         Game();
         ~Game();
         bool IsRunning() const;
-        void Init(uint32_t width, uint32_t height);
+        void Init();
+        void Run();
         void ProcessInput();
         void Update();
         void Render();
