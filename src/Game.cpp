@@ -3,14 +3,16 @@
 #include "Game.h"
 #include "glm/glm.hpp"
 
-
 Game::Game()
 {
 	this->isRunning = false;
+	Logger::Log("Game Constructor Call");
 }
 
 Game::~Game()
-{}
+{
+	Logger::Log("Game Destructor Call");
+}
 
 bool Game::IsRunning() const
 {
@@ -21,7 +23,7 @@ void Game::Init()
 {	
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
 	{
-		std::cerr << "SDL INIT FAILED :( !" << std::endl;
+		Logger::Err("SDL INIT FAILED :( !");
 		return;
 	}
 	// SDL_DisplayMode displayMode;
@@ -40,7 +42,7 @@ void Game::Init()
 	renderer = SDL_CreateRenderer(window, -1, 0);
 	if (!renderer)
 	{
-		std::cerr << "SDL RENDERER CREATION FAILED :( !" << std::endl;
+		Logger::Err("SDL RENDERER CREATION FAILED :( !");
 		return;
 	}
 	SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
@@ -59,6 +61,7 @@ void Game::Setup()
 {
 	playerPosition = glm::vec2(1.0, 20.0);
 	playerVelocity = glm::vec2(200.0, 50.0);
+	Logger::Log("Game Setup Call");
 }
 
 void Game::Run()
@@ -102,7 +105,6 @@ void Game::ProcessInput()
 void Game::Update()
 {
 	double_t deltaTime = (SDL_GetTicks() - msSincePrevFrame) / 1000.0;
-	
 	// Capping FPS here
 	uint32_t timeToWait = MS_PER_FRAME - (SDL_GetTicks() - msSincePrevFrame);
 	if (timeToWait > 0 && timeToWait <= MS_PER_FRAME)
@@ -144,4 +146,5 @@ void Game::Destroy()
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
+	Logger::Err("It's Dead |-_-\"|");
 }

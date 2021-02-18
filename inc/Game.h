@@ -8,6 +8,8 @@
 #include "imgui.h"
 #include "sol/sol.hpp"
 
+#include "Logger.h"
+
 #define GAME_TITLE "THE GAME"
 
 const uint32_t FPS = 60;
