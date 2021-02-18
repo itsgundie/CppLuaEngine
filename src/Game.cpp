@@ -18,7 +18,7 @@ bool Game::IsRunning() const
 }
 
 void Game::Init()
-{
+{	
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
 	{
 		std::cerr << "SDL INIT FAILED :( !" << std::endl;
@@ -58,7 +58,7 @@ glm::vec2 playerVelocity;
 void Game::Setup()
 {
 	playerPosition = glm::vec2(1.0, 20.0);
-	playerVelocity = glm::vec2(1.0, 0.0);
+	playerVelocity = glm::vec2(200.0, 50.0);
 }
 
 void Game::Run()
@@ -101,18 +101,17 @@ void Game::ProcessInput()
 
 void Game::Update()
 {
-	// float deltaTime = 0.1f;
-	// //float deltaTime = (SDL_GetTicks() - ticksLastFrame) / 1000.0f;
-	// projectilePosX += projectileVelX * deltaTime;
-	// projectilePosY += projectileVelY * deltaTime;
-	//while(!SDL_TICKS_PASSED(SDL_GetTicks(), msSincePrevFrame + MS_PER_FRAME));
+	double_t deltaTime = (SDL_GetTicks() - msSincePrevFrame) / 1000.0;
+	
+	// Capping FPS here
 	uint32_t timeToWait = MS_PER_FRAME - (SDL_GetTicks() - msSincePrevFrame);
 	if (timeToWait > 0 && timeToWait <= MS_PER_FRAME)
 		SDL_Delay(timeToWait);
+	
 	msSincePrevFrame = SDL_GetTicks();
 
-	playerPosition.x += playerVelocity.x;
-	playerPosition.y += playerVelocity.y;
+	playerPosition.x += playerVelocity.x * deltaTime;
+	playerPosition.y += playerVelocity.y * deltaTime;
 }
 
 void Game::Render()
