@@ -10,12 +10,16 @@
 
 #define GAME_TITLE "THE GAME"
 
+const uint32_t FPS = 60;
+const uint32_t MS_PER_FRAME = 1000 / FPS;
+
 class Game
 {
     private:
         bool isRunning;
         SDL_Window *window;
         SDL_Renderer *renderer;
+        uint32_t msSincePrevFrame = MS_PER_FRAME;
     public:
         uint32_t windowWidth;
         uint32_t windowHeight;
@@ -23,6 +27,7 @@ class Game
         ~Game();
         bool IsRunning() const;
         void Init();
+        void Setup();
         void Run();
         void ProcessInput();
         void Update();

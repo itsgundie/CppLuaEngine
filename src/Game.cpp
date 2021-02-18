@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Constants.h"
 #include "Game.h"
+#include "glm/glm.hpp"
+
 
 Game::Game()
 {
@@ -14,11 +16,6 @@ bool Game::IsRunning() const
 {
 	return this->isRunning;
 }
-
-float projectilePosX = 0.0f;
-float projectilePosY = 0.0f;
-float projectileVelX = 5.0f;
-float projectileVelY = 5.0f;
 
 void Game::Init()
 {
@@ -51,8 +48,23 @@ void Game::Init()
 	return;
 }
 
+// float projectilePosX = 0.0f;
+// float projectilePosY = 0.0f;
+// float projectileVelX = 5.0f;
+// float projectileVelY = 5.0f;
+glm::vec2 playerPosition;
+glm::vec2 playerVelocity;
+
+void Game::Setup()
+{
+	playerPosition = glm::vec2(1.0, 20.0);
+	playerVelocity = glm::vec2(1.0, 0.0);
+}
+
 void Game::Run()
 {
+	this->Init();
+	this->Setup();
 	while(this->IsRunning())
 	{
 			this->ProcessInput();
@@ -89,10 +101,18 @@ void Game::ProcessInput()
 
 void Game::Update()
 {
-	float deltaTime = 0.1f;
-	//float deltaTime = (SDL_GetTicks() - ticksLastFrame) / 1000.0f;
-	projectilePosX += projectileVelX * deltaTime;
-	projectilePosY += projectileVelY * deltaTime;
+	// float deltaTime = 0.1f;
+	// //float deltaTime = (SDL_GetTicks() - ticksLastFrame) / 1000.0f;
+	// projectilePosX += projectileVelX * deltaTime;
+	// projectilePosY += projectileVelY * deltaTime;
+	//while(!SDL_TICKS_PASSED(SDL_GetTicks(), msSincePrevFrame + MS_PER_FRAME));
+	uint32_t timeToWait = MS_PER_FRAME - (SDL_GetTicks() - msSincePrevFrame);
+	if (timeToWait > 0 && timeToWait <= MS_PER_FRAME)
+		SDL_Delay(timeToWait);
+	msSincePrevFrame = SDL_GetTicks();
+
+	playerPosition.x += playerVelocity.x;
+	playerPosition.y += playerVelocity.y;
 }
 
 void Game::Render()
@@ -104,7 +124,9 @@ void Game::Render()
 	SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
 	SDL_FreeSurface(surface);
 
-	SDL_Rect dstRect = {10, 10, 32, 32};
+	SDL_Rect dstRect = {static_cast<int>(playerPosition.x), 
+						static_cast<int>(playerPosition.y), 
+						32, 32};
 	SDL_RenderCopy(renderer, texture, NULL, &dstRect);
 	SDL_DestroyTexture(texture);
 
