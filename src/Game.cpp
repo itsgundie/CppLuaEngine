@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Constants.h"
 #include "Game.h"
+#include "ECS.h"
 #include "glm/glm.hpp"
 
 Game::Game()
@@ -59,8 +60,12 @@ glm::vec2 playerVelocity;
 
 void Game::Setup()
 {
-	playerPosition = glm::vec2(1.0, 20.0);
-	playerVelocity = glm::vec2(200.0, 50.0);
+	// playerPosition = glm::vec2(1.0, 20.0);
+	// playerVelocity = glm::vec2(200.0, 50.0);
+	
+	// Entity some registry.CreateEntity();
+	// some.AddComponent<TransformComponent>();.
+	
 	Logger::Log("Game Setup Call");
 }
 
@@ -104,7 +109,7 @@ void Game::ProcessInput()
 
 void Game::Update()
 {
-	double_t deltaTime = (SDL_GetTicks() - msSincePrevFrame) / 1000.0;
+	//double_t deltaTime = (SDL_GetTicks() - msSincePrevFrame) / 1000.0;
 	// Capping FPS here
 	uint32_t timeToWait = MS_PER_FRAME - (SDL_GetTicks() - msSincePrevFrame);
 	if (timeToWait > 0 && timeToWait <= MS_PER_FRAME)
@@ -112,8 +117,13 @@ void Game::Update()
 	
 	msSincePrevFrame = SDL_GetTicks();
 
-	playerPosition.x += playerVelocity.x * deltaTime;
-	playerPosition.y += playerVelocity.y * deltaTime;
+	// playerPosition.x += playerVelocity.x * deltaTime;
+	// playerPosition.y += playerVelocity.y * deltaTime;
+	// MovementSystem.Update();
+	// CollisionSystem.Update();
+	//DamageSystem.Update();
+
+
 }
 
 void Game::Render()
@@ -121,15 +131,15 @@ void Game::Render()
 	SDL_SetRenderDrawColor(renderer, 42, 42, 42, 255);
 	SDL_RenderClear(renderer);
 
-	SDL_Surface *surface = IMG_Load("./assets/images/tank-tiger-right.png");
-	SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
-	SDL_FreeSurface(surface);
+	// SDL_Surface *surface = IMG_Load("./assets/images/tank-tiger-right.png");
+	// SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
+	// SDL_FreeSurface(surface);
 
-	SDL_Rect dstRect = {static_cast<int>(playerPosition.x), 
-						static_cast<int>(playerPosition.y), 
-						32, 32};
-	SDL_RenderCopy(renderer, texture, NULL, &dstRect);
-	SDL_DestroyTexture(texture);
+	// SDL_Rect dstRect = {static_cast<int>(playerPosition.x), 
+	// 					static_cast<int>(playerPosition.y), 
+	// 					32, 32};
+	// SDL_RenderCopy(renderer, texture, NULL, &dstRect);
+	// SDL_DestroyTexture(texture);
 
 	// SDL_Rect projectile
 	// {
@@ -138,6 +148,9 @@ void Game::Render()
 
 	// SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 	// SDL_RenderFillRect(renderer, &projectile);
+	
+	// SystemReder
+	
 	SDL_RenderPresent(renderer);
 }
 
