@@ -74,6 +74,8 @@
         "unordered_set": "cpp",
         "utility": "cpp",
         "variant": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "memory_resource": "cpp",
+        "lua": "cpp"
     }
 }
