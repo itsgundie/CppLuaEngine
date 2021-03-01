@@ -2,6 +2,7 @@
 #define ECS_H
 
 #include <stdint.h>
+#include <set>
 #include <bitset>
 #include <vector>
 #include <unordered_map>
@@ -135,8 +136,16 @@ class Registry
         std::vector<Signature> entityComponentSignatures;
         // Don't need sorting, collection of systems
         std::unordered_map<std::type_index, System*> systems;
+        // Enities to add/remove in Update phase
+        std::set<Entity> entitiesToBeAdded;
+        std::set<Entity> entitiesToBeRemoved;
+
     public:
         Registry() = default;
+        void Update();
+        Entity CreateEntity();
+        // void AddComponent<T>()
+        void AddEntityToSystem(Entity entity);
         // TODO: create/destroy entity, add/remove component from entity
         //      has component, get component
         //      add/remove system, has/get system

@@ -1,5 +1,6 @@
 
 #include "ECS.h"
+#include "Logger.h"
 
 int32_t Entity::GetId() const
 {
@@ -25,17 +26,30 @@ void System::RemoveEntityFromSystem(Entity entity)
     entities.end());
 };
 
-
-
-
 std::vector<Entity> System::GetSystemEntities() const
 {
     return(enitites);
 };
 
 
-
 const Signature& System::GetComponentSignature() const
 {
     return(componentSignature);
 };
+
+Entity Registry::CreateEntity()
+{
+    int32_t entityId;
+
+    entityId = numEntities++;
+
+    Entity entity(entityId);
+    entitiesToBeAdded.insert(entity);
+    Logger::Log("Created entity, ID == " + std::to_string(entityId));
+    return(entity);
+}
+
+void Registry::Update()
+{
+    // Actually remove and add entities from sets
+}
