@@ -2,6 +2,8 @@
 #include "ECS.h"
 #include "Logger.h"
 
+int32_t IComponent::nextId = 0;
+
 int32_t Entity::GetId() const
 {
     return(id);
@@ -47,6 +49,23 @@ Entity Registry::CreateEntity()
     entitiesToBeAdded.insert(entity);
     Logger::Log("Created entity, ID == " + std::to_string(entityId));
     return(entity);
+}
+
+void Registry::AddEntityToSystems(Entity entity)
+{
+    const int32_t entityId = entity.GetId();
+
+    const auto& entComponentSignature = entityComponentSignatures[entityId];
+
+    for (auto& systema: systems)
+    {
+        const auto& sysComponentSignature = systema.second->GetComponentSignature();
+        // Bitwise AND comparison to check parity of signatures
+        bool isIntrested = (entComponentSignature & sysComponentSignature);
+
+        if(isIntrested)
+            systema.second->AddEntityToSystem(entity);
+    }
 }
 
 void Registry::Update()

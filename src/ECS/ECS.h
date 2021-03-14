@@ -134,7 +134,7 @@ class Registry
         std::vector<IPool*> componentPools;
         // Turned On Components per Entity, vector index is entity ID
         std::vector<Signature> entityComponentSignatures;
-        // Don't need sorting, collection of systems
+        // Don't need sorting, collection of active systems, Map Key = system type ID
         std::unordered_map<std::type_index, System*> systems;
         // Enities to add/remove in Update phase
         std::set<Entity> entitiesToBeAdded;
@@ -149,17 +149,53 @@ class Registry
         template <typename TComponent, typename ...TArgs> void AddComponent(Entity entity, TArgs&& ...args);
         template <typename TComponent> void RemoveComponent(Entity entity);
         template <typename TComponent> bool HasComponent(Entity entity);  
-        // TODO: create/destroy entity, add/remove component from entity
-        //      has component, get component
-        //      add/remove system, has/get system
+
+        template <typename TSystem, typename ...TArgs> void AddSystem(TArgs&& ...args);
+        template <typename TSystem> void RemoveSystem();
+        template <typename TSystem> bool HasSystem() const;
+        template <typename TSystem> TSystem& GetSystem() const;
+
+        // Based on entity signature adding it to systems, that interested in it 
+        void AddEntityToSystems(Entity entity);
 };
 
 template <typename TComponent>
 void System::RequireComponent()
 {
-    const auto componentId = Component<T>::GetId();
+    const auto componentId = Component<TComponent>::GetId();
     componentSignature.set(componentId);
 }
+
+template <typename TSystem, typename ...TArgs>
+void Registry::AddSystem(TArgs&& ...args)
+{
+    TSystem* newSystem(new TSystem(std::forward<TArgs>(args)...));
+    systems.insert(std::make_pair(std::type_index(typeid(TSystem)), newSystem));
+}
+
+template <typename TSystem>
+void Registry::RemoveSystem()
+{
+    auto systemIterator = systems.find(std::type_index(typeid(TSystem)));
+    systems.erase(systemIterator);
+}
+
+template <typename TSystem>
+bool Registry::HasSystem() const
+{
+    auto systemExist = systems.find(std::type_index(typeid(TSystem)));
+    // If pointer not at terminator, we finded system
+    return(systemExist != systems.end());
+}
+
+template <typename TSystem>
+TSystem& Registry::GetSystem() const
+{
+    auto systemFinded = systems.find(std::type_index(typeid(TSystem)));
+    // Get pointer to secobd element of collection -> System itself
+    return *(std::static_pointer_cast<TSystem>(systemFinded->second));
+}
+
 
 // Generic method implementation needs to be in the header
 template <typename TComponent, typename ...TArgs>
@@ -180,7 +216,7 @@ void Registry::AddComponent(Entity entity, TArgs&& ...args)
         Pool<TComponent> *newComponentPool = new Pool<TComponent>();
         componentPools[componentId] = newComponentPool;
     }
-    Pool<TComponent> *componentPool = Pool<T>(componentPools[componentId]);
+    Pool<TComponent> *componentPool = Pool<TComponent>(componentPools[componentId]);
 
     if(entityId >= componentPool->GetSize())
     {
@@ -210,7 +246,7 @@ bool Registry::HasComponent(Entity entity)
     const auto componentId = Component<TComponent>::GetId();
     const auto entityId = entity.GetId();
 
-    return(entityComponentSignatures[entityId].test(componentId))
+    return(entityComponentSignatures[entityId].test(componentId));
 }
 
 #endif
