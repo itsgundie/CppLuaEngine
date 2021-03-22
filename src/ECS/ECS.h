@@ -59,6 +59,12 @@ class Entity
         Entity& operator =(const Entity& other) = default;
 
         class Registry* registry;
+
+        template <typename TComponent, typename ...TArgs> void AddComponent(TArgs&& ...args);
+        template <typename TComponent> void RemoveComponent();
+        template <typename TComponent> bool HasComponent() const;
+        template <typename TComponent> TComponent& GetComponent() const;
+
 };
 
 class System
@@ -148,11 +154,11 @@ class Registry
         // Registry() = default;
         Registry() 
         {
-            Logger::Log("Registry Smart Pointer");
+            Logger::Log("Created Registry With Smart Pointer");
         }
         ~Registry() 
         {
-            Logger::Log("Registry Smart Pointer");
+            Logger::Log("Registry deleted automatically");
         }
         void Update();
         Entity CreateEntity();
@@ -161,6 +167,7 @@ class Registry
         template <typename TComponent, typename ...TArgs> void AddComponent(Entity entity, TArgs&& ...args);
         template <typename TComponent> void RemoveComponent(Entity entity);
         template <typename TComponent> bool HasComponent(Entity entity);  
+        template <typename TComponent> TComponent& GetComponent(Entity entity) const;
 
         template <typename TSystem, typename ...TArgs> void AddSystem(TArgs&& ...args);
         template <typename TSystem> void RemoveSystem();
@@ -243,7 +250,7 @@ void Registry::AddComponent(Entity entity, TArgs&& ...args)
     entityComponentSignatures[entityId].set(componentId);
 
 
-    Logger::Log("Component ID = " + std::to_string(componentId) + " was added to entity ID " + std::to_string(entityId));
+    Logger::Log("Component ID = " + std::to_string(componentId) + " was ADDED to entity ID " + std::to_string(entityId));
 }
 
 template <typename TComponent>
@@ -254,6 +261,8 @@ void Registry::RemoveComponent(Entity entity)
 
     if(entityComponentSignatures[entityId].test(componentId))
         entityComponentSignatures[entityId].set(componentId, false);
+
+    Logger::Log("Component ID = " + std::to_string(componentId) + " was REMOVED from entity ID " + std::to_string(entityId));
 }
 
 template <typename TComponent>
@@ -263,6 +272,44 @@ bool Registry::HasComponent(Entity entity)
     const auto entityId = entity.GetId();
 
     return(entityComponentSignatures[entityId].test(componentId));
+}
+
+template <typename TComponent>
+TComponent& Registry::GetComponent(Entity entity) const
+{
+    const auto componentId = Component<TComponent>::GetId();
+    const auto entityId = entity.GetId();
+    auto componentPool = std::static_pointer_cast<Pool<TComponent>>(componentPools[componentId]);
+
+    return(componentPool->Get(entityId));
+} 
+
+
+
+//
+
+template <typename TComponent, typename ...TArgs>
+void Entity::AddComponent(TArgs&& ...args)
+{
+    registry->AddComponent<TComponent>(*this, std::forward<TArgs>(args)...);
+}
+
+template <typename TComponent>
+void Entity::RemoveComponent()
+{
+    registry->RemoveComponent<TComponent>(*this);
+}
+
+template <typename TComponent>
+bool Entity::HasComponent() const
+{
+    return(registry->HasComponent<TComponent>(*this));
+}
+
+template <typename TComponent>
+TComponent& Entity::GetComponent() const
+{
+    return(registry->GetComponent<TComponent>(*this));
 }
 
 #endif
