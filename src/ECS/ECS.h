@@ -8,6 +8,8 @@
 #include <unordered_map>
 #include <typeindex>
 
+#include "Logger.h"
+
 const uint32_t MAX_COMPONENTS = 32;
 
 typedef std::bitset<MAX_COMPONENTS> Signature;
@@ -21,12 +23,12 @@ struct IComponent
 template <typename T>
 class Component: public IComponent
 {
-    static int32_t GetId()
-    {
-        static auto id = nextId++;
-        return(id);
-    }
-
+    public:
+        static int32_t GetId()
+        {
+            static auto id = nextId++;
+            return(id);
+        }
 };
 
 class Entity
@@ -55,18 +57,20 @@ class Entity
             return id < other.id;
         };
         Entity& operator =(const Entity& other) = default;
+
+        class Registry* registry;
 };
 
 class System
 {
     private:
     Signature componentSignature;
-    std::vector<Entity> enitites;
+    std::vector<Entity> entities;
 
     public:
     System() = default;
     ~System() = default;
-    void AddEnitityToSystem(Entity enitity);
+    void AddEntityToSystem(Entity enitity);
     void RemoveEntityFromSystem(Entity entity);
     std::vector<Entity> GetSystemEntities() const;
     const Signature& GetComponentSignature() const;
@@ -131,17 +135,25 @@ class Registry
     private:
         int32_t numEntities = 0;
         // Vector index is Component type, Pool index is entity ID
-        std::vector<IPool*> componentPools;
+        std::vector<std::shared_ptr<IPool>> componentPools;
         // Turned On Components per Entity, vector index is entity ID
         std::vector<Signature> entityComponentSignatures;
         // Don't need sorting, collection of active systems, Map Key = system type ID
-        std::unordered_map<std::type_index, System*> systems;
+        std::unordered_map<std::type_index, std::shared_ptr<System>> systems;
         // Enities to add/remove in Update phase
         std::set<Entity> entitiesToBeAdded;
         std::set<Entity> entitiesToBeRemoved;
 
     public:
-        Registry() = default;
+        // Registry() = default;
+        Registry() 
+        {
+            Logger::Log("Registry Smart Pointer");
+        }
+        ~Registry() 
+        {
+            Logger::Log("Registry Smart Pointer");
+        }
         void Update();
         Entity CreateEntity();
         // void AddComponent<T>()
@@ -169,7 +181,7 @@ void System::RequireComponent()
 template <typename TSystem, typename ...TArgs>
 void Registry::AddSystem(TArgs&& ...args)
 {
-    TSystem* newSystem(new TSystem(std::forward<TArgs>(args)...));
+    std::shared_ptr<TSystem> newSystem = std::make_shared<TSystem>(std::forward<TArgs>(args)...);
     systems.insert(std::make_pair(std::type_index(typeid(TSystem)), newSystem));
 }
 
@@ -213,10 +225,11 @@ void Registry::AddComponent(Entity entity, TArgs&& ...args)
     // Create new pool with given type of component, if it's nonexistent/null
     if(!componentPools[componentId])
     {
-        Pool<TComponent> *newComponentPool = new Pool<TComponent>();
+        std::shared_ptr<Pool<TComponent>> newComponentPool = std::make_shared<Pool<TComponent>>();
         componentPools[componentId] = newComponentPool;
     }
-    Pool<TComponent> *componentPool = Pool<TComponent>(componentPools[componentId]);
+    std::shared_ptr<Pool<TComponent>> componentPool = 
+        std::static_pointer_cast<Pool<TComponent>>(componentPools[componentId]);
 
     if(entityId >= componentPool->GetSize())
     {
@@ -228,6 +241,9 @@ void Registry::AddComponent(Entity entity, TArgs&& ...args)
     componentPool->Set(entityId, newComponent);
     // Activate component signature, set to 1 component position in bitset
     entityComponentSignatures[entityId].set(componentId);
+
+
+    Logger::Log("Component ID = " + std::to_string(componentId) + " was added to entity ID " + std::to_string(entityId));
 }
 
 template <typename TComponent>

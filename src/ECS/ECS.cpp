@@ -10,7 +10,7 @@ int32_t Entity::GetId() const
 }
 
 
-void System::AddEnitityToSystem(Entity enitity)
+void System::AddEntityToSystem(Entity enitity)
 {
     entities.push_back(enitity);
 };
@@ -23,14 +23,14 @@ void System::RemoveEntityFromSystem(Entity entity)
     entities.erase(std::remove_if(entities.begin(), entities.end(), 
     [&entity](Entity other)
     {
-        return(entity == other)
+        return(entity == other);
     }), 
     entities.end());
 };
 
 std::vector<Entity> System::GetSystemEntities() const
 {
-    return(enitites);
+    return(entities);
 };
 
 
@@ -47,6 +47,10 @@ Entity Registry::CreateEntity()
 
     Entity entity(entityId);
     entitiesToBeAdded.insert(entity);
+
+    if(entityId >= entityComponentSignatures.size())
+        entityComponentSignatures.resize(entityId + 1);
+
     Logger::Log("Created entity, ID == " + std::to_string(entityId));
     return(entity);
 }
@@ -57,19 +61,23 @@ void Registry::AddEntityToSystems(Entity entity)
 
     const auto& entComponentSignature = entityComponentSignatures[entityId];
 
-    for (auto& systema: systems)
+    for (auto& system: systems)
     {
-        const auto& sysComponentSignature = systema.second->GetComponentSignature();
+        const auto& sysComponentSignature = system.second->GetComponentSignature();
         // Bitwise AND comparison to check parity of signatures
-        bool isIntrested = (entComponentSignature & sysComponentSignature);
+        bool isIntrested = (entComponentSignature & sysComponentSignature) == sysComponentSignature;
 
         if(isIntrested)
-            systema.second->AddEntityToSystem(entity);
+            system.second->AddEntityToSystem(entity);
     }
 }
 
 void Registry::Update()
 {
-    // Actually remove and add entities from sets
+    for(auto thisEntity: entitiesToBeAdded)
+    {
+        AddEntityToSystems(thisEntity);
+    }
+    entitiesToBeAdded.clear();
 }
 

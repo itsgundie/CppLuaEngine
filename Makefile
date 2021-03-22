@@ -4,6 +4,7 @@ CFLAGS = g++ -g -Wall -Wfatal-errors -std=c++17
 
 LIBS_HEADERS = -I "./inc/" \
 				-I "./src/ECS/" \
+				-I "./src/ECS/Components/" \
 				-I "./lib/SDL2/include/" \
 				-I "./lib/SDL2_image/" \
 				-I "./lib/SDL2_ttf/" \
@@ -22,7 +23,8 @@ LIBS = 	-L "./lib/lua-5.3.0/install/lib/" \
 		-lSDL2_ttf
 
 
-SRCS = ./src/*.cpp
+SRCS = ./src/*.cpp \
+		./src/ECS/*.cpp
 
 INCS = ./inc/*.h \
 ./inc/*.hpp

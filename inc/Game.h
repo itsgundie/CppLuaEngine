@@ -9,6 +9,7 @@
 #include "sol/sol.hpp"
 
 #include "Logger.h"
+#include "ECS.h"
 
 #define GAME_TITLE "THE GAME"
 
@@ -21,6 +22,9 @@ class Game
         bool isRunning;
         SDL_Window *window;
         SDL_Renderer *renderer;
+
+        std::unique_ptr<Registry> registry;
+
         uint32_t msSincePrevFrame = MS_PER_FRAME;
     public:
         uint32_t windowWidth;

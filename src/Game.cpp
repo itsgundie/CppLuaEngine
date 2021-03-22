@@ -4,10 +4,14 @@
 #include "ECS.h"
 #include "glm/glm.hpp"
 
+#include "TransformComponent.h"
+#include "RigidBodyComponent.h"
+
 Game::Game()
 {
 	this->isRunning = false;
-	Logger::Log("Game Constructor Call");
+	// registry = Registry();
+	registry = std::make_unique<Registry>();
 }
 
 Game::~Game()
@@ -51,21 +55,15 @@ void Game::Init()
 	return;
 }
 
-// float projectilePosX = 0.0f;
-// float projectilePosY = 0.0f;
-// float projectileVelX = 5.0f;
-// float projectileVelY = 5.0f;
 glm::vec2 playerPosition;
 glm::vec2 playerVelocity;
 
 void Game::Setup()
 {
-	// playerPosition = glm::vec2(1.0, 20.0);
-	// playerVelocity = glm::vec2(200.0, 50.0);
-	
-	// Entity some registry.CreateEntity();
-	// some.AddComponent<TransformComponent>();.
-	
+	Entity tank = registry->CreateEntity();
+	// Entity anotherOne = registry->CreateEntity();
+	registry->AddComponent<TransformComponent>(tank, glm::vec2(13.0f, 32.0f), glm::vec2(3.0f, 3.0f));
+	registry->AddComponent<RigidBodyComponent>(tank, glm::vec2(66.0f, 1.0f));
 	Logger::Log("Game Setup Call");
 }
 
@@ -116,6 +114,7 @@ void Game::Update()
 		SDL_Delay(timeToWait);
 	
 	msSincePrevFrame = SDL_GetTicks();
+
 
 	// playerPosition.x += playerVelocity.x * deltaTime;
 	// playerPosition.y += playerVelocity.y * deltaTime;
