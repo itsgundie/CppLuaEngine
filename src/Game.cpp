@@ -4,6 +4,7 @@
 #include "ECS.h"
 #include "glm/glm.hpp"
 
+#include "MovementSystem.h"
 #include "TransformComponent.h"
 #include "RigidBodyComponent.h"
 
@@ -60,11 +61,13 @@ glm::vec2 playerVelocity;
 
 void Game::Setup()
 {
+	registry->AddSystem<MovementSystem>();
+
 	Entity tank = registry->CreateEntity();
 	// Entity anotherOne = registry->CreateEntity();
 	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 33.0f), glm::vec2(3.0f, 3.0f), 0.0f);
 	tank.AddComponent<RigidBodyComponent>(glm::vec2(13.0f, 55.0f));
-	tank.RemoveComponent<TransformComponent>();
+	// tank.RemoveComponent<TransformComponent>();
 
 	Logger::Log("Game Setup Call");
 }
@@ -109,7 +112,7 @@ void Game::ProcessInput()
 
 void Game::Update()
 {
-	//double_t deltaTime = (SDL_GetTicks() - msSincePrevFrame) / 1000.0;
+	double_t deltaTime = (SDL_GetTicks() - msSincePrevFrame) / 1000.0;
 	// Capping FPS here
 	uint32_t timeToWait = MS_PER_FRAME - (SDL_GetTicks() - msSincePrevFrame);
 	if (timeToWait > 0 && timeToWait <= MS_PER_FRAME)
@@ -117,12 +120,11 @@ void Game::Update()
 	
 	msSincePrevFrame = SDL_GetTicks();
 
+	registry->GetSystem<MovementSystem>().Update(deltaTime);
 
-	// playerPosition.x += playerVelocity.x * deltaTime;
-	// playerPosition.y += playerVelocity.y * deltaTime;
-	// MovementSystem.Update();
-	// CollisionSystem.Update();
-	//DamageSystem.Update();
+
+	// At the End of Frame add/remove entities in que to proceed
+	registry->Update();
 
 
 }

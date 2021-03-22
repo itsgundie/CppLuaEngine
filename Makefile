@@ -5,6 +5,7 @@ CFLAGS = g++ -g -Wall -Wfatal-errors -std=c++17
 LIBS_HEADERS = -I "./inc/" \
 				-I "./src/ECS/" \
 				-I "./src/ECS/Components/" \
+				-I "./src/ECS/Systems/" \
 				-I "./lib/SDL2/include/" \
 				-I "./lib/SDL2_image/" \
 				-I "./lib/SDL2_ttf/" \
