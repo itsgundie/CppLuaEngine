@@ -4,9 +4,12 @@
 #include "ECS.h"
 #include "glm/glm.hpp"
 
-#include "MovementSystem.h"
 #include "TransformComponent.h"
+#include "MovementSystem.h"
 #include "RigidBodyComponent.h"
+
+#include "SpriteComponent.h"
+#include "RenderSystem.h"
 
 Game::Game()
 {
@@ -62,11 +65,23 @@ glm::vec2 playerVelocity;
 void Game::Setup()
 {
 	registry->AddSystem<MovementSystem>();
+	registry->AddSystem<RenderSystem>();
 
 	Entity tank = registry->CreateEntity();
 	// Entity anotherOne = registry->CreateEntity();
 	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 33.0f), glm::vec2(3.0f, 3.0f), 0.0f);
-	tank.AddComponent<RigidBodyComponent>(glm::vec2(13.0f, 55.0f));
+	tank.AddComponent<RigidBodyComponent>(glm::vec2(566.0f, 355.0f));
+
+	tank.AddComponent<SpriteComponent>(13, 13);
+
+	Entity antitank = registry->CreateEntity();
+	// Entity anotherOne = registry->CreateEntity();
+	antitank.AddComponent<TransformComponent>(glm::vec2(1800.0f, 933.0f), glm::vec2(33.0f, 33.0f), 0.0f);
+	antitank.AddComponent<RigidBodyComponent>(glm::vec2(-422.0f, -299.0f));
+
+	antitank.AddComponent<SpriteComponent>(33, 113);
+
+
 	// tank.RemoveComponent<TransformComponent>();
 
 	Logger::Log("Game Setup Call");
@@ -153,6 +168,8 @@ void Game::Render()
 	// SDL_RenderFillRect(renderer, &projectile);
 	
 	// SystemReder
+
+	registry->GetSystem<RenderSystem>().Update(renderer);
 	
 	SDL_RenderPresent(renderer);
 }
