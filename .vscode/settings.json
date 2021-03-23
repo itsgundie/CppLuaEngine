@@ -76,6 +76,7 @@
         "variant": "cpp",
         "vector": "cpp",
         "memory_resource": "cpp",
-        "lua": "cpp"
+        "lua": "cpp",
+        "typeindex": "cpp"
     }
 }

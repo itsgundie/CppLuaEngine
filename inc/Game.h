@@ -10,6 +10,7 @@
 
 #include "Logger.h"
 #include "ECS.h"
+#include "AssetManager.h"
 
 #define GAME_TITLE "THE GAME"
 
@@ -24,6 +25,7 @@ class Game
         SDL_Renderer *renderer;
 
         std::unique_ptr<Registry> registry;
+        std::unique_ptr<AssetManager> assetManager;
 
         uint32_t msSincePrevFrame = MS_PER_FRAME;
     public:

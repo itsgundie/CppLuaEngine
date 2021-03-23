@@ -16,6 +16,8 @@ Game::Game()
 	this->isRunning = false;
 	// registry = Registry();
 	registry = std::make_unique<Registry>();
+	assetManager = std::make_unique<AssetManager>();
+	Logger::Log("Game Constructor Call");
 }
 
 Game::~Game()
@@ -67,19 +69,27 @@ void Game::Setup()
 	registry->AddSystem<MovementSystem>();
 	registry->AddSystem<RenderSystem>();
 
+	// Adding assets to asset manager
+	assetManager->AddTexture(renderer, "tank_panther_right", "./assets/images/tank-panther-right.png");
+	assetManager->AddTexture(renderer, "tank_panther_left", "./assets/images/tank-panther-left.png");
+	assetManager->AddTexture(renderer, "tank_panther_up", "./assets/images/tank-panther-up.png");
+	assetManager->AddTexture(renderer, "tank_panther_down", "./assets/images/tank-panther-down.png");
+
+
+	// Creating Entity And Adding to it Components
 	Entity tank = registry->CreateEntity();
 	// Entity anotherOne = registry->CreateEntity();
-	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 33.0f), glm::vec2(3.0f, 3.0f), 0.0f);
-	tank.AddComponent<RigidBodyComponent>(glm::vec2(566.0f, 355.0f));
+	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 11.0f), glm::vec2(1.0f, 1.0f), 33.0f);
+	tank.AddComponent<RigidBodyComponent>(glm::vec2(2000.0f, 2000.0f));
 
-	tank.AddComponent<SpriteComponent>(13, 13);
+	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32);
 
 	Entity antitank = registry->CreateEntity();
 	// Entity anotherOne = registry->CreateEntity();
-	antitank.AddComponent<TransformComponent>(glm::vec2(1800.0f, 933.0f), glm::vec2(33.0f, 33.0f), 0.0f);
-	antitank.AddComponent<RigidBodyComponent>(glm::vec2(-422.0f, -299.0f));
+	antitank.AddComponent<TransformComponent>(glm::vec2(1800.0f, 1000.0f), glm::vec2(5.0f, 5.0f), 21.0f);
+	antitank.AddComponent<RigidBodyComponent>(glm::vec2(-2222.0f, -1299.0f));
 
-	antitank.AddComponent<SpriteComponent>(33, 113);
+	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32);
 
 
 	// tank.RemoveComponent<TransformComponent>();
@@ -169,7 +179,7 @@ void Game::Render()
 	
 	// SystemReder
 
-	registry->GetSystem<RenderSystem>().Update(renderer);
+	registry->GetSystem<RenderSystem>().Update(renderer, assetManager);
 	
 	SDL_RenderPresent(renderer);
 }

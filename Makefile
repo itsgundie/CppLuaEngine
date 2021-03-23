@@ -3,6 +3,7 @@ NAME=MythOfHilda.game
 CFLAGS = g++ -g -Wall -Wfatal-errors -std=c++17
 
 LIBS_HEADERS = -I "./inc/" \
+				-I "./src/AssetsManager/" \
 				-I "./src/ECS/" \
 				-I "./src/ECS/Components/" \
 				-I "./src/ECS/Systems/" \
@@ -25,7 +26,9 @@ LIBS = 	-L "./lib/lua-5.3.0/install/lib/" \
 
 
 SRCS = ./src/*.cpp \
-		./src/ECS/*.cpp
+		./src/ECS/*.cpp \
+		./src/AssetsManager/*.cpp
+
 
 INCS = ./inc/*.h \
 ./inc/*.hpp
