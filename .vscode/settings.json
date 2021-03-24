@@ -78,5 +78,6 @@
         "memory_resource": "cpp",
         "lua": "cpp",
         "typeindex": "cpp"
-    }
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

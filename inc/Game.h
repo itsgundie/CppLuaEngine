@@ -36,6 +36,7 @@ class Game
         bool IsRunning() const;
         void Init();
         void Setup();
+        void LoadLevel(int32_t level);
         void Run();
         void ProcessInput();
         void Update();

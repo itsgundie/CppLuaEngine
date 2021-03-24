@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "Constants.h"
 #include "Game.h"
 #include "ECS.h"
@@ -10,6 +11,8 @@
 
 #include "SpriteComponent.h"
 #include "RenderSystem.h"
+
+
 
 Game::Game()
 {
@@ -64,8 +67,11 @@ void Game::Init()
 glm::vec2 playerPosition;
 glm::vec2 playerVelocity;
 
-void Game::Setup()
+
+void Game::LoadLevel(int32_t level)
 {
+
+
 	registry->AddSystem<MovementSystem>();
 	registry->AddSystem<RenderSystem>();
 
@@ -74,6 +80,39 @@ void Game::Setup()
 	assetManager->AddTexture(renderer, "tank_panther_left", "./assets/images/tank-panther-left.png");
 	assetManager->AddTexture(renderer, "tank_panther_up", "./assets/images/tank-panther-up.png");
 	assetManager->AddTexture(renderer, "tank_panther_down", "./assets/images/tank-panther-down.png");
+	assetManager->AddTexture(renderer, "tilemap-jungle", "./assets/tilemaps/jungle.png");
+
+
+	// Loading Tile Map
+	int32_t tileSize = 32;
+	double_t tileScale = 2.0;
+	int32_t mapNumColumns = 25;
+	int32_t mapNumRows = 20;
+
+	std::fstream jungleMap;
+	jungleMap.open("./assets/tilemaps/jungle.map");
+
+	for(int32_t y = 0; y < mapNumRows; y++)
+	{
+		for(int32_t x = 0; x < mapNumColumns; x++)
+		{
+			char charInTile;
+			
+			jungleMap.get(charInTile);
+			int32_t srcRectY = std::atoi(&charInTile) * tileSize;
+
+			jungleMap.get(charInTile);
+			int32_t srcRectX = std::atoi(&charInTile) * tileSize;
+			jungleMap.ignore();
+
+			Entity tile = registry->CreateEntity();
+			tile.AddComponent<TransformComponent>(glm::vec2(x * (tileScale * tileSize),
+				y * (tileScale * tileSize)), glm::vec2(tileScale, tileScale), 0.0f);
+
+			tile.AddComponent<SpriteComponent>("tilemap-jungle", tileSize, tileSize, srcRectX, srcRectY);
+		}
+	}
+
 
 
 	// Creating Entity And Adding to it Components
@@ -90,6 +129,14 @@ void Game::Setup()
 	antitank.AddComponent<RigidBodyComponent>(glm::vec2(-2222.0f, -1299.0f));
 
 	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32);
+
+
+}
+
+
+void Game::Setup()
+{
+	LoadLevel(1);
 
 
 	// tank.RemoveComponent<TransformComponent>();
