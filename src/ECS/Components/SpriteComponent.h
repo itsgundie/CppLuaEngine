@@ -7,16 +7,18 @@ struct SpriteComponent
 {
     int32_t width;
     int32_t height;
+    int32_t zIndex;
     std::string assetId;
 
     SDL_Rect srcRect;
 
     // If method called without arguments, component will get standart values
-    SpriteComponent(std::string assetId = "", int32_t width = 0, int32_t height = 0, int32_t srcRectX = 0, int32_t srcRectY = 0)
+    SpriteComponent(std::string assetId = "", int32_t width = 0, int32_t height = 0, int32_t zIndex = 0, int32_t srcRectX = 0, int32_t srcRectY = 0)
     {
         this->width = width;
         this->height = height;
         this->assetId = assetId;
+        this->zIndex = zIndex;
         this->srcRect = { srcRectX, srcRectY, width, height};
     }
 };

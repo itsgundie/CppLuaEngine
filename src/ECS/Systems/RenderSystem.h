@@ -1,6 +1,8 @@
 #ifndef RENDERSYSTEM_H
 #define RENDERSYSTEM_H
 
+#include <vector>
+
 #include "SDL.h"
 
 #include "ECS.h"
@@ -19,14 +21,41 @@ class RenderSystem: public System
 
         void Update(SDL_Renderer* renderer, std::unique_ptr<AssetManager>& assetManager)
         {
-            for (Entity entity: GetSystemEntities())
+            // Temporal struct to hold both components needed for sorting
+            struct RenderebleEntity
             {
-                const TransformComponent transform = entity.GetComponent<TransformComponent>();
-                const SpriteComponent sprite = entity.GetComponent<SpriteComponent>();
+                TransformComponent transform;
+                SpriteComponent sprite;
+            };
+            
+            std::vector<RenderebleEntity> renderebleEntities;
 
-                // Set rectangle size for source
+            // Gather entities to sort and render in one vector structure
+            for(auto entity: GetSystemEntities())
+            {
+                RenderebleEntity renderebleEntity;
+                renderebleEntity.sprite = entity.GetComponent<SpriteComponent>();
+                renderebleEntity.transform = entity.GetComponent<TransformComponent>();
+
+                renderebleEntities.emplace_back(renderebleEntity);
+            }
+
+            // Sort all entities of system to render by z-index
+            // Using lambda function to check zIndex for sorting condition
+            sort(renderebleEntities.begin(), renderebleEntities.end(), 
+            [](const RenderebleEntity& a, RenderebleEntity& b)
+            {
+                return a.sprite.zIndex < b.sprite.zIndex;
+            });
+
+            // Render sorted in vector entities
+            for (auto entity: renderebleEntities)
+            {
+                const TransformComponent transform = entity.transform;
+                const SpriteComponent sprite = entity.sprite;
+
                 SDL_Rect srcRect = sprite.srcRect;
-                // Set rectangle size for output
+                
                 SDL_Rect dstRect = {
                     static_cast<int32_t>(transform.position.x),
                     static_cast<int32_t>(transform.position.y),
@@ -36,17 +65,6 @@ class RenderSystem: public System
 
                 SDL_RenderCopyEx(renderer, assetManager->GetTexture(sprite.assetId),
                      &srcRect, &dstRect, transform.rotation, NULL, SDL_FLIP_NONE);
-
-                // SDL_Rect rectangleToDraw =
-                // {
-                //     static_cast<int32_t>(transform.position.x),
-                //     static_cast<int32_t>(transform.position.y),
-                //     sprite.width, sprite.height
-                // };
-
-                // SDL_SetRenderDrawColor(renderer, 31, 63, 127, 255);
-                // SDL_RenderFillRect(renderer, &rectangleToDraw);
-
             }
         }
 };

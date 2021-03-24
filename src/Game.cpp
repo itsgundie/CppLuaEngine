@@ -109,7 +109,7 @@ void Game::LoadLevel(int32_t level)
 			tile.AddComponent<TransformComponent>(glm::vec2(x * (tileScale * tileSize),
 				y * (tileScale * tileSize)), glm::vec2(tileScale, tileScale), 0.0f);
 
-			tile.AddComponent<SpriteComponent>("tilemap-jungle", tileSize, tileSize, srcRectX, srcRectY);
+			tile.AddComponent<SpriteComponent>("tilemap-jungle", tileSize, tileSize, 0, srcRectX, srcRectY);
 		}
 	}
 
@@ -121,14 +121,14 @@ void Game::LoadLevel(int32_t level)
 	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 11.0f), glm::vec2(1.0f, 1.0f), 33.0f);
 	tank.AddComponent<RigidBodyComponent>(glm::vec2(2000.0f, 2000.0f));
 
-	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32);
+	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32, 1);
 
 	Entity antitank = registry->CreateEntity();
 	// Entity anotherOne = registry->CreateEntity();
 	antitank.AddComponent<TransformComponent>(glm::vec2(1800.0f, 1000.0f), glm::vec2(5.0f, 5.0f), 21.0f);
 	antitank.AddComponent<RigidBodyComponent>(glm::vec2(-2222.0f, -1299.0f));
 
-	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32);
+	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32, 2);
 
 
 }
