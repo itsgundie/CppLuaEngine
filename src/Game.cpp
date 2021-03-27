@@ -10,7 +10,10 @@
 #include "RigidBodyComponent.h"
 
 #include "SpriteComponent.h"
+#include "AnimationComponent.h"
 #include "RenderSystem.h"
+#include "AnimationSystem.h"
+
 
 
 
@@ -74,6 +77,7 @@ void Game::LoadLevel(int32_t level)
 
 	registry->AddSystem<MovementSystem>();
 	registry->AddSystem<RenderSystem>();
+	registry->AddSystem<AnimationSystem>();
 
 	// Adding assets to asset manager
 	assetManager->AddTexture(renderer, "tank_panther_right", "./assets/images/tank-panther-right.png");
@@ -81,6 +85,9 @@ void Game::LoadLevel(int32_t level)
 	assetManager->AddTexture(renderer, "tank_panther_up", "./assets/images/tank-panther-up.png");
 	assetManager->AddTexture(renderer, "tank_panther_down", "./assets/images/tank-panther-down.png");
 	assetManager->AddTexture(renderer, "tilemap-jungle", "./assets/tilemaps/jungle.png");
+	assetManager->AddTexture(renderer, "chopper-img", "./assets/images/chopper.png");
+	assetManager->AddTexture(renderer, "radar-img", "./assets/images/radar.png");
+
 
 
 	// Loading Tile Map
@@ -113,7 +120,17 @@ void Game::LoadLevel(int32_t level)
 		}
 	}
 
+	Entity chopper = registry->CreateEntity();
+	chopper.AddComponent<TransformComponent>(glm::vec2(500.0f, 500.0f), glm::vec2(4.0f, 4.0f), 0.0f);
+	chopper.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
+	chopper.AddComponent<SpriteComponent>("chopper-img", 32, 32, 3);
+	chopper.AddComponent<AnimationComponent>(2, 8, true);
 
+	Entity radar = registry->CreateEntity();
+	radar.AddComponent<TransformComponent>(glm::vec2(1500.0f, 50.0f), glm::vec2(1.0f, 1.0f), 0.0f);
+	radar.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
+	radar.AddComponent<SpriteComponent>("radar-img", 64, 64, 99);
+	radar.AddComponent<AnimationComponent>(8, 4, true);
 
 	// Creating Entity And Adding to it Components
 	Entity tank = registry->CreateEntity();
@@ -193,6 +210,7 @@ void Game::Update()
 	msSincePrevFrame = SDL_GetTicks();
 
 	registry->GetSystem<MovementSystem>().Update(deltaTime);
+	registry->GetSystem<AnimationSystem>().Update();
 
 
 	// At the End of Frame add/remove entities in que to proceed
