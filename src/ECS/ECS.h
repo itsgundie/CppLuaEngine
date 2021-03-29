@@ -215,7 +215,6 @@ TSystem& Registry::GetSystem() const
     return *(std::static_pointer_cast<TSystem>(systemFinded->second));
 }
 
-
 // Generic method implementation needs to be in the header
 template <typename TComponent, typename ...TArgs>
 void Registry::AddComponent(Entity entity, TArgs&& ...args)

@@ -14,12 +14,16 @@
 #include "RenderSystem.h"
 #include "AnimationSystem.h"
 
+#include "BoxColliderComponent.h"
+#include "CollisionSystem.h"
+
 
 
 
 Game::Game()
 {
 	this->isRunning = false;
+	this->isDebug = false;
 	// registry = Registry();
 	registry = std::make_unique<Registry>();
 	assetManager = std::make_unique<AssetManager>();
@@ -43,10 +47,7 @@ void Game::Init()
 		Logger::Err("SDL INIT FAILED :( !");
 		return;
 	}
-	// SDL_DisplayMode displayMode;
-	// SDL_GetCurrentDisplayMode(0, &displayMode);
-	// windowWidth = displayMode.w;
-	// windowHeight = displayMode.h;
+
 	windowWidth = GAME_RENDERING_WIDTH;
 	windowHeight = GAME_RENDERING_HEIGHT;
 	window = SDL_CreateWindow(GAME_TITLE, SDL_WINDOWPOS_CENTERED, 
@@ -78,6 +79,7 @@ void Game::LoadLevel(int32_t level)
 	registry->AddSystem<MovementSystem>();
 	registry->AddSystem<RenderSystem>();
 	registry->AddSystem<AnimationSystem>();
+	registry->AddSystem<CollisionSystem>();
 
 	// Adding assets to asset manager
 	assetManager->AddTexture(renderer, "tank_panther_right", "./assets/images/tank-panther-right.png");
@@ -136,17 +138,18 @@ void Game::LoadLevel(int32_t level)
 	Entity tank = registry->CreateEntity();
 	// Entity anotherOne = registry->CreateEntity();
 	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 11.0f), glm::vec2(1.0f, 1.0f), 33.0f);
-	tank.AddComponent<RigidBodyComponent>(glm::vec2(2000.0f, 2000.0f));
-
+	tank.AddComponent<RigidBodyComponent>(glm::vec2(2222.0f, 1299.0f));
 	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32, 1);
+	tank.AddComponent<BoxColliderComponent>(32, 32);
+
 
 	Entity antitank = registry->CreateEntity();
 	// Entity anotherOne = registry->CreateEntity();
 	antitank.AddComponent<TransformComponent>(glm::vec2(1800.0f, 1000.0f), glm::vec2(5.0f, 5.0f), 21.0f);
 	antitank.AddComponent<RigidBodyComponent>(glm::vec2(-2222.0f, -1299.0f));
-
 	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32, 2);
-
+	// bounding box not considering scale of object, need to think about it
+	antitank.AddComponent<BoxColliderComponent>(32 * 5, 32 * 5);
 
 }
 
@@ -191,6 +194,10 @@ void Game::ProcessInput()
 				{
 					isRunning = false;
 				}
+				if(sdlEvent.key.keysym.sym == SDLK_d)
+				{
+					isDebug= !isDebug;
+				}
 				break;
 			}
 			default:
@@ -211,7 +218,7 @@ void Game::Update()
 
 	registry->GetSystem<MovementSystem>().Update(deltaTime);
 	registry->GetSystem<AnimationSystem>().Update();
-
+	registry->GetSystem<CollisionSystem>().Update();
 
 	// At the End of Frame add/remove entities in que to proceed
 	registry->Update();
@@ -224,27 +231,9 @@ void Game::Render()
 	SDL_SetRenderDrawColor(renderer, 42, 42, 42, 255);
 	SDL_RenderClear(renderer);
 
-	// SDL_Surface *surface = IMG_Load("./assets/images/tank-tiger-right.png");
-	// SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
-	// SDL_FreeSurface(surface);
-
-	// SDL_Rect dstRect = {static_cast<int>(playerPosition.x), 
-	// 					static_cast<int>(playerPosition.y), 
-	// 					32, 32};
-	// SDL_RenderCopy(renderer, texture, NULL, &dstRect);
-	// SDL_DestroyTexture(texture);
-
-	// SDL_Rect projectile
-	// {
-	// 	(int32_t)projectilePosX, (int32_t)projectilePosY, 10, 10
-	// };
-
-	// SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-	// SDL_RenderFillRect(renderer, &projectile);
-	
-	// SystemReder
-
 	registry->GetSystem<RenderSystem>().Update(renderer, assetManager);
+	if(isDebug)
+		registry->GetSystem<CollisionSystem>().RenderBoxCollision(renderer);
 	
 	SDL_RenderPresent(renderer);
 }

@@ -10,7 +10,6 @@ enum LogType
     LOG_WARNING,
     LOG_ERROR
 };
-
 struct  LogEntry
 {
     LogType     type;
