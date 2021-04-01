@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <set>
+#include <deque>
 #include <bitset>
 #include <vector>
 #include <unordered_map>
@@ -38,6 +39,8 @@ class Entity
     public:
         Entity(int32_t id): id(id) {};
         int32_t GetId() const;
+        void Kill();
+
         Entity(const Entity& entity) = default;
 
         bool operator ==(const Entity& other) const
@@ -150,6 +153,9 @@ class Registry
         std::set<Entity> entitiesToBeAdded;
         std::set<Entity> entitiesToBeRemoved;
 
+        // ids will be added when entity being removed
+        std::deque<int32_t> freeIds;
+
     public:
         // Registry() = default;
         Registry() 
@@ -162,6 +168,7 @@ class Registry
         }
         void Update();
         Entity CreateEntity();
+        void RemoveEntity(Entity entity);
         // void AddComponent<T>()
         void AddEntityToSystem(Entity entity);
         template <typename TComponent, typename ...TArgs> void AddComponent(Entity entity, TArgs&& ...args);
@@ -176,6 +183,7 @@ class Registry
 
         // Based on entity signature adding it to systems, that interested in it 
         void AddEntityToSystems(Entity entity);
+        void RemoveEntityFromSystems(Entity entity);
 };
 
 template <typename TComponent>

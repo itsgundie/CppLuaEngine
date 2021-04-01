@@ -51,7 +51,11 @@ class CollisionSystem: public System
                     );
 
                     if(isCollided)
+                    {
+                        entityA.Kill();
+                        entityB.Kill();
                         Logger::Log("Entity " + std::to_string(entityA.GetId()) + " is collided with Entity " + std::to_string(entityB.GetId()));
+                    }
                 }
             }
         }
