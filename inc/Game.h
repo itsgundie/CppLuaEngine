@@ -11,6 +11,7 @@
 #include "Logger.h"
 #include "ECS.h"
 #include "AssetManager.h"
+#include "EventBus.h"
 
 #define GAME_TITLE "THE GAME"
 
@@ -27,6 +28,7 @@ class Game
 
         std::unique_ptr<Registry> registry;
         std::unique_ptr<AssetManager> assetManager;
+        std::unique_ptr<EventBus> eventBus;
 
         uint32_t msSincePrevFrame = MS_PER_FRAME;
     public:
