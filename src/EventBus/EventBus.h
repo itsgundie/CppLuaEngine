@@ -56,6 +56,11 @@ public:
         Logger::Log("EventBus destructor call");
     }
 
+    void Reset()
+    {
+        subscribers.clear();
+    }
+
     // Listener subscribes to a type of event with specific func/method to call
     // eventBus->SubscribeToEvent<WeGotGhostInTheHouseEvent>(&Phone::CallGhostbusters);
     template <typename TEvent, typename TOwner>
@@ -85,6 +90,7 @@ public:
             }
         }
     }
+
 
     private:
     std::map<std::type_index, std::unique_ptr<HandlerList>> subscribers;

@@ -17,7 +17,8 @@
 #include "BoxColliderComponent.h"
 #include "CollisionSystem.h"
 
-
+#include "DamageSystem.h"
+#include "KeyboardControlSystem.h"
 
 
 Game::Game()
@@ -27,6 +28,7 @@ Game::Game()
 	// registry = Registry();
 	registry = std::make_unique<Registry>();
 	assetManager = std::make_unique<AssetManager>();
+	eventBus = std::make_unique<EventBus>();
 	Logger::Log("Game Constructor Call");
 }
 
@@ -80,6 +82,8 @@ void Game::LoadLevel(int32_t level)
 	registry->AddSystem<RenderSystem>();
 	registry->AddSystem<AnimationSystem>();
 	registry->AddSystem<CollisionSystem>();
+	registry->AddSystem<DamageSystem>();
+	registry->AddSystem<KeyboardControlSystem>();
 
 	// Adding assets to asset manager
 	assetManager->AddTexture(renderer, "tank_panther_right", "./assets/images/tank-panther-right.png");
@@ -198,6 +202,7 @@ void Game::ProcessInput()
 				{
 					isDebug= !isDebug;
 				}
+				eventBus->EmitEvent<KeyPressedEvent>(static_cast<SDL_KeyCode>(sdlEvent.key.keysym.sym));
 				break;
 			}
 			default:
@@ -216,9 +221,13 @@ void Game::Update()
 	
 	msSincePrevFrame = SDL_GetTicks();
 
+	eventBus->Reset();
+	registry->GetSystem<DamageSystem>().SubscribeToEvents(eventBus);
+	registry->GetSystem<KeyboardControlSystem>().SubscribeToEvents(eventBus);
+
 	registry->GetSystem<MovementSystem>().Update(deltaTime);
 	registry->GetSystem<AnimationSystem>().Update();
-	registry->GetSystem<CollisionSystem>().Update();
+	registry->GetSystem<CollisionSystem>().Update(eventBus);
 
 	// At the End of Frame add/remove entities in que to proceed
 	registry->Update();
