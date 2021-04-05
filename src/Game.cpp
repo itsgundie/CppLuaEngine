@@ -20,6 +20,8 @@
 #include "DamageSystem.h"
 #include "KeyboardControlSystem.h"
 
+#include "KeyboardControlComponent.h"
+
 
 Game::Game()
 {
@@ -91,7 +93,7 @@ void Game::LoadLevel(int32_t level)
 	assetManager->AddTexture(renderer, "tank_panther_up", "./assets/images/tank-panther-up.png");
 	assetManager->AddTexture(renderer, "tank_panther_down", "./assets/images/tank-panther-down.png");
 	assetManager->AddTexture(renderer, "tilemap-jungle", "./assets/tilemaps/jungle.png");
-	assetManager->AddTexture(renderer, "chopper-img", "./assets/images/chopper.png");
+	assetManager->AddTexture(renderer, "chopper-img", "./assets/images/chopper-spritesheet.png");
 	assetManager->AddTexture(renderer, "radar-img", "./assets/images/radar.png");
 
 
@@ -131,6 +133,7 @@ void Game::LoadLevel(int32_t level)
 	chopper.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
 	chopper.AddComponent<SpriteComponent>("chopper-img", 32, 32, 3);
 	chopper.AddComponent<AnimationComponent>(2, 8, true);
+	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -2000), glm::vec2(2000, 0), glm::vec2(0, 2000), glm::vec2(-2000, 0));
 
 	Entity radar = registry->CreateEntity();
 	radar.AddComponent<TransformComponent>(glm::vec2(1500.0f, 50.0f), glm::vec2(1.0f, 1.0f), 0.0f);
