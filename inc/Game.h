@@ -25,6 +25,7 @@ class Game
         bool isDebug;
         SDL_Window *window;
         SDL_Renderer *renderer;
+        SDL_Rect camera;
 
         std::unique_ptr<Registry> registry;
         std::unique_ptr<AssetManager> assetManager;
@@ -32,8 +33,10 @@ class Game
 
         uint32_t msSincePrevFrame = MS_PER_FRAME;
     public:
-        uint32_t windowWidth;
-        uint32_t windowHeight;
+        static uint32_t windowWidth;
+        static uint32_t windowHeight;
+        static uint32_t mapWidth;
+        static uint32_t mapHeight;
         Game();
         ~Game();
         bool IsRunning() const;

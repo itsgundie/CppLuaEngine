@@ -19,7 +19,7 @@ class RenderSystem: public System
             RequireComponent<SpriteComponent>();
         }
 
-        void Update(SDL_Renderer* renderer, std::unique_ptr<AssetManager>& assetManager)
+        void Update(SDL_Renderer* renderer, std::unique_ptr<AssetManager>& assetManager, SDL_Rect& camera)
         {
             // Temporal struct to hold both components needed for sorting
             struct RenderebleEntity
@@ -57,8 +57,8 @@ class RenderSystem: public System
                 SDL_Rect srcRect = sprite.srcRect;
                 
                 SDL_Rect dstRect = {
-                    static_cast<int32_t>(transform.position.x),
-                    static_cast<int32_t>(transform.position.y),
+                    static_cast<int32_t>(transform.position.x - camera.x),
+                    static_cast<int32_t>(transform.position.y - camera.y),
                     static_cast<int32_t>(sprite.width * transform.scale.x),
                     static_cast<int32_t>(sprite.height * transform.scale.y)
                     };
