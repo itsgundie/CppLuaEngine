@@ -25,6 +25,10 @@
 #include "CameraMovementSystem.h"
 #include "CameraFollowComponent.h"
 
+#include "ProjectileEmitterComponent.h"
+#include "ProjectileEmitterSystem.h"
+
+#include "HealthComponent.h"
 
 uint32_t Game::windowWidth;
 uint32_t Game::windowHeight;
@@ -104,6 +108,7 @@ void Game::LoadLevel(int32_t level)
 	registry->AddSystem<DamageSystem>();
 	registry->AddSystem<KeyboardControlSystem>();
 	registry->AddSystem<CameraMovementSystem>();
+	registry->AddSystem<ProjectileEmitterSystem>();
 
 	// Adding assets to asset manager
 	assetManager->AddTexture(renderer, "tank_panther_right", "./assets/images/tank-panther-right.png");
@@ -113,7 +118,7 @@ void Game::LoadLevel(int32_t level)
 	assetManager->AddTexture(renderer, "tilemap-jungle", "./assets/tilemaps/jungle.png");
 	assetManager->AddTexture(renderer, "chopper-img", "./assets/images/chopper-spritesheet.png");
 	assetManager->AddTexture(renderer, "radar-img", "./assets/images/radar.png");
-
+	assetManager->AddTexture(renderer, "bullet-img", "./assets/images/bullet.png");
 
 
 	// Loading Tile Map
@@ -157,6 +162,7 @@ void Game::LoadLevel(int32_t level)
 	chopper.AddComponent<AnimationComponent>(2, 8, true);
 	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -2000), glm::vec2(2000, 0), glm::vec2(0, 2000), glm::vec2(-2000, 0));
 	chopper.AddComponent<CameraFollowComponent>();
+	chopper.AddComponent<HealthComponent>(100);
 
 	Entity radar = registry->CreateEntity();
 	radar.AddComponent<TransformComponent>(glm::vec2(1500.0f, 50.0f), glm::vec2(1.0f, 1.0f), 0.0f);
@@ -171,6 +177,9 @@ void Game::LoadLevel(int32_t level)
 	tank.AddComponent<RigidBodyComponent>(glm::vec2(2222.0f, 1299.0f));
 	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32, 1);
 	tank.AddComponent<BoxColliderComponent>(32, 32);
+	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(5000.0, 5000.0), 2000, 2000, 0);
+	tank.AddComponent<HealthComponent>(100);
+
 
 
 	Entity antitank = registry->CreateEntity();
@@ -180,6 +189,9 @@ void Game::LoadLevel(int32_t level)
 	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32, 2);
 	// bounding box not considering scale of object, need to think about it
 	antitank.AddComponent<BoxColliderComponent>(32 * 5, 32 * 5);
+	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-5000.0, -5000.0), 2000, 2000, 0);
+	antitank.AddComponent<HealthComponent>(100);
+
 
 }
 
@@ -224,7 +236,7 @@ void Game::ProcessInput()
 				{
 					isRunning = false;
 				}
-				if(sdlEvent.key.keysym.sym == SDLK_d)
+				if(sdlEvent.key.keysym.sym == SDLK_SPACE)
 				{
 					isDebug= !isDebug;
 				}
@@ -255,6 +267,7 @@ void Game::Update()
 	registry->GetSystem<AnimationSystem>().Update();
 	registry->GetSystem<CollisionSystem>().Update(eventBus);
 	registry->GetSystem<CameraMovementSystem>().Update(camera);
+	registry->GetSystem<ProjectileEmitterSystem>().Update(registry);
 
 	// At the End of Frame add/remove entities in que to proceed
 	registry->Update();

@@ -20,8 +20,8 @@ public:
     }
     void OnCollisionEvent(CollisionEvent& event)
     {
-        event.a.Kill();
-        event.b.Kill();
+        // event.a.Kill();
+        // event.b.Kill();
         Logger::Log("Entity " + std::to_string(event.a.GetId()) + " is collided with Entity " + std::to_string(event.b.GetId()));
     }
 
