@@ -59,7 +59,7 @@ class CollisionSystem: public System
             }
         }
 
-        void RenderBoxCollision(SDL_Renderer* renderer)
+        void RenderBoxCollision(SDL_Renderer* renderer, SDL_Rect& camera)
         {
             for(auto entity: GetSystemEntities())
             {
@@ -67,8 +67,8 @@ class CollisionSystem: public System
                 const BoxColliderComponent collider = entity.GetComponent<BoxColliderComponent>();
 
                 SDL_Rect colliderRect = {
-                    static_cast<int>(transform.position.x + collider.offset.x),
-                    static_cast<int>(transform.position.y + collider.offset.y),
+                    static_cast<int>(transform.position.x + collider.offset.x - camera.x),
+                    static_cast<int>(transform.position.y + collider.offset.y - camera.y),
                     static_cast<int>(collider.width),
                     static_cast<int>(collider.height)
                 };
