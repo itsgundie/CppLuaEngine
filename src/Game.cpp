@@ -142,7 +142,7 @@ void Game::LoadLevel(int32_t level)
 			tile.AddComponent<TransformComponent>(glm::vec2(x * (tileScale * tileSize),
 				y * (tileScale * tileSize)), glm::vec2(tileScale, tileScale), 0.0f);
 
-			tile.AddComponent<SpriteComponent>("tilemap-jungle", tileSize, tileSize, 0, srcRectX, srcRectY);
+			tile.AddComponent<SpriteComponent>("tilemap-jungle", tileSize, tileSize, 0, false, srcRectX, srcRectY);
 		}
 	}
 	jungleMap.close();
@@ -161,7 +161,7 @@ void Game::LoadLevel(int32_t level)
 	Entity radar = registry->CreateEntity();
 	radar.AddComponent<TransformComponent>(glm::vec2(1500.0f, 50.0f), glm::vec2(1.0f, 1.0f), 0.0f);
 	radar.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
-	radar.AddComponent<SpriteComponent>("radar-img", 64, 64, 99);
+	radar.AddComponent<SpriteComponent>("radar-img", 64, 64, 99, true);
 	radar.AddComponent<AnimationComponent>(8, 4, true);
 
 	// Creating Entity And Adding to it Components

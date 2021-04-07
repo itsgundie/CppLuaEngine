@@ -57,8 +57,8 @@ class RenderSystem: public System
                 SDL_Rect srcRect = sprite.srcRect;
                 
                 SDL_Rect dstRect = {
-                    static_cast<int32_t>(transform.position.x - camera.x),
-                    static_cast<int32_t>(transform.position.y - camera.y),
+                    static_cast<int32_t>(transform.position.x - (sprite.isFixed ? 0 : camera.x)),
+                    static_cast<int32_t>(transform.position.y - (sprite.isFixed ? 0 : camera.y)),
                     static_cast<int32_t>(sprite.width * transform.scale.x),
                     static_cast<int32_t>(sprite.height * transform.scale.y)
                     };
