@@ -7,7 +7,7 @@
 #include "SpriteComponent.h"
 #include "BoxColliderComponent.h"
 #include "ProjectileEmitterComponent.h"
-
+#include "ProjectileComponent.h"
 
 class ProjectileEmitterSystem: public System
 {
@@ -38,6 +38,7 @@ public:
                 newProjectile.AddComponent<RigidBodyComponent>(projectile.projectileVelocity);
                 newProjectile.AddComponent<SpriteComponent>("bullet-img", 4, 4, 99);
                 newProjectile.AddComponent<BoxColliderComponent>(4, 4);
+                newProjectile.AddComponent<ProjectileComponent>(projectile.isFriendly, projectile.hitPercentDamage, projectile.projectileDuration);
 
                 projectile.lastEmissionTime = SDL_GetTicks();
             }
