@@ -35,6 +35,7 @@ SRCS = ./src/*.cpp \
 INCS = ./inc/*.h \
 ./inc/*.hpp
 
+all: build run
 
 .PHONY: build
 build:
@@ -43,6 +44,7 @@ build:
 libs:
 	sh installSDL2.sh
 
+.PHONY: clean
 clean:
 	rm $(NAME)
 

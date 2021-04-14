@@ -68,6 +68,11 @@ class Entity
         template <typename TComponent> bool HasComponent() const;
         template <typename TComponent> TComponent& GetComponent() const;
 
+        void Tag(const std::string& tag);
+        bool HasTag(const std::string& tag) const;
+        void Group(const std::string& groupName);
+        bool BelongsToGroup(const std::string& groupName) const;
+
 };
 
 class System
@@ -156,6 +161,14 @@ class Registry
         // ids will be added when entity being removed
         std::deque<int32_t> freeIds;
 
+        // Data structures for tags and groups
+        // For fast access we duplicate
+        std::unordered_map<std::string, Entity> entitiesPerTag;
+        std::unordered_map<int32_t, std::string> tagPerEntity;
+        std::unordered_map<std::string, std::set<Entity>> entitiesPerGroup;
+        std::unordered_map<int32_t, std::string> groupPerEntity;
+
+
     public:
         // Registry() = default;
         Registry() 
@@ -184,6 +197,16 @@ class Registry
         // Based on entity signature adding it to systems, that interested in it 
         void AddEntityToSystems(Entity entity);
         void RemoveEntityFromSystems(Entity entity);
+
+        void TagEntity(Entity entity, const std::string& tag);
+        bool EntityHasTag(Entity entity, const std::string& tag) const;
+        Entity GetEntityByTag(const std::string& tag) const;
+        void RemoveEntityTag(Entity entity);
+
+        void GroupEntity(Entity entity, const std::string& group);
+        bool EntityBelongsToGroup(Entity entity, const std::string& group) const;
+        std::vector<Entity> GetEntitiesByGroup(const std::string& group) const;
+        void RemoveEntityGroup(Entity entity);
 };
 
 template <typename TComponent>

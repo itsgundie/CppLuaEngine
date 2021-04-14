@@ -147,6 +147,7 @@ void Game::LoadLevel(int32_t level)
 			jungleMap.ignore();
 
 			Entity tile = registry->CreateEntity();
+			tile.Group("tile");
 			tile.AddComponent<TransformComponent>(glm::vec2(x * (tileScale * tileSize),
 				y * (tileScale * tileSize)), glm::vec2(tileScale, tileScale), 0.0f);
 
@@ -166,6 +167,8 @@ void Game::LoadLevel(int32_t level)
 	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -2000), glm::vec2(2000, 0), glm::vec2(0, 2000), glm::vec2(-2000, 0));
 	chopper.AddComponent<CameraFollowComponent>();
 	chopper.AddComponent<HealthComponent>(100);
+	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(221.0, 221.0), 0, 3300, 0, true);
+	chopper.Tag("player");
 
 	Entity radar = registry->CreateEntity();
 	radar.AddComponent<TransformComponent>(glm::vec2(1500.0f, 50.0f), glm::vec2(1.0f, 1.0f), 0.0f);
@@ -182,6 +185,7 @@ void Game::LoadLevel(int32_t level)
 	tank.AddComponent<BoxColliderComponent>(32, 32);
 	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(5000.0, 5000.0), 2000, 3000, 0);
 	tank.AddComponent<HealthComponent>(100);
+	tank.Group("enemy");
 
 
 
@@ -194,7 +198,7 @@ void Game::LoadLevel(int32_t level)
 	antitank.AddComponent<BoxColliderComponent>(32 * 5, 32 * 5);
 	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-5000.0, -5000.0), 2000, 3000, 0);
 	antitank.AddComponent<HealthComponent>(100);
-
+	antitank.Group("enemy");
 
 }
 
@@ -265,6 +269,7 @@ void Game::Update()
 	eventBus->Reset();
 	registry->GetSystem<DamageSystem>().SubscribeToEvents(eventBus);
 	registry->GetSystem<KeyboardControlSystem>().SubscribeToEvents(eventBus);
+	registry->GetSystem<ProjectileEmitterSystem>().SubscribeToEvents(eventBus);
 
 	registry->GetSystem<MovementSystem>().Update(deltaTime);
 	registry->GetSystem<AnimationSystem>().Update();

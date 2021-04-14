@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/user-n184/Desktop/CppLuaEngine/build",
-  "command": "/usr/bin/clang++    -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/CppLuaEngine.dir/main.cpp.o -c /Users/user-n184/Desktop/CppLuaEngine/main.cpp",
-  "file": "/Users/user-n184/Desktop/CppLuaEngine/main.cpp"
-}
-]
