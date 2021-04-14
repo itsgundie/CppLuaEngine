@@ -167,7 +167,8 @@ void Game::LoadLevel(int32_t level)
 	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -2000), glm::vec2(2000, 0), glm::vec2(0, 2000), glm::vec2(-2000, 0));
 	chopper.AddComponent<CameraFollowComponent>();
 	chopper.AddComponent<HealthComponent>(100);
-	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(221.0, 221.0), 0, 3300, 0, true);
+	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(221.0, 221.0), 0, 3300, 25, true);
+	chopper.AddComponent<BoxColliderComponent>(32, 32);
 	chopper.Tag("player");
 
 	Entity radar = registry->CreateEntity();
@@ -176,28 +177,24 @@ void Game::LoadLevel(int32_t level)
 	radar.AddComponent<SpriteComponent>("radar-img", 64, 64, 99, true);
 	radar.AddComponent<AnimationComponent>(8, 4, true);
 
-	// Creating Entity And Adding to it Components
 	Entity tank = registry->CreateEntity();
-	// Entity anotherOne = registry->CreateEntity();
 	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 11.0f), glm::vec2(1.0f, 1.0f), 33.0f);
 	tank.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
 	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32, 1);
 	tank.AddComponent<BoxColliderComponent>(32, 32);
-	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(5000.0, 5000.0), 2000, 3000, 0);
+	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(5000.0, 5000.0), 2000, 3000, 10);
 	tank.AddComponent<HealthComponent>(100);
 	tank.Group("enemy");
 
 
-
 	Entity antitank = registry->CreateEntity();
-	// Entity anotherOne = registry->CreateEntity();
 	antitank.AddComponent<TransformComponent>(glm::vec2(1400.0f, 1000.0f), glm::vec2(5.0f, 5.0f), 21.0f);
 	antitank.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
 	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32, 2);
 	// bounding box not considering scale of object, need to think about it
 	antitank.AddComponent<BoxColliderComponent>(32 * 5, 32 * 5);
-	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-5000.0, -5000.0), 2000, 3000, 0);
-	antitank.AddComponent<HealthComponent>(100);
+	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-5000.0, -5000.0), 2000, 3000, 5);
+	antitank.AddComponent<HealthComponent>(200);
 	antitank.Group("enemy");
 
 }

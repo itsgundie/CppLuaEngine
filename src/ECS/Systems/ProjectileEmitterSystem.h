@@ -32,7 +32,7 @@ public:
         	Logger::Log("SPACE PRESSED O~O");
 	        for (auto entity: GetSystemEntities())
 	        {
-	            if (entity.HasComponent<CameraFollowComponent>())
+	            if (entity.HasTag("player"))
 	            {
                     const auto projectileEmitter = entity.GetComponent<ProjectileEmitterComponent>();
                     const auto transform = entity.GetComponent<TransformComponent>();
@@ -58,6 +58,7 @@ public:
                     projectileVelocity.y = projectileEmitter.projectileVelocity.y * directionY;
 
                     Entity projectile = entity.registry->CreateEntity();
+                    projectile.Group("projectile");
                     projectile.AddComponent<TransformComponent>(projectilePosition, glm::vec2(1.0, 1.0), 0.0);
                     projectile.AddComponent<RigidBodyComponent>(projectileVelocity);
                     projectile.AddComponent<SpriteComponent>("bullet-img", 4, 4, 4);
@@ -90,6 +91,7 @@ public:
                     projectilePosition.y = (transform.scale.y * sprite.height / 2);
                 }
                 Entity newProjectile = registry->CreateEntity();
+                newProjectile.Group("projectile");
                 newProjectile.AddComponent<TransformComponent>(projectilePosition, glm::vec2(1.0, 1.0), 0.0);
                 newProjectile.AddComponent<RigidBodyComponent>(projectile.projectileVelocity);
                 newProjectile.AddComponent<SpriteComponent>("bullet-img", 4, 4, 99);
