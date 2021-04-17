@@ -20,7 +20,7 @@ void Logger::Log(const std::string &message)
     newEntry.type = LOG_INFO;
     
     newEntry.message = "LOG [" + CurrentDateTimeToString() + "]: " + message;
-    std::cout << "\x1B[32m" << newEntry.message << "\033[0m" << std::endl;
+    // std::cout << "\x1B[32m" << newEntry.message << "\033[0m" << std::endl;
 
     messages.push_back(newEntry);
 }
@@ -30,6 +30,6 @@ void Logger::Err(const std::string &message)
     LogEntry newEntry;
     newEntry.type = LOG_ERROR;
     newEntry.message = "ERR: [" + CurrentDateTimeToString() + "]: " + message;
-    std::cerr << "\x1B[91m" << newEntry.message << "\033[0m" << std::endl;
+    // std::cerr << "\x1B[91m" << newEntry.message << "\033[0m" << std::endl;
     messages.push_back(newEntry);
 }

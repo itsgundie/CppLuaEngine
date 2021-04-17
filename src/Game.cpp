@@ -32,6 +32,9 @@
 
 #include "HealthComponent.h"
 
+#include "TextComponent.h"
+#include "RenderTextSystem.h"
+
 uint32_t Game::windowWidth;
 uint32_t Game::windowHeight;
 uint32_t Game::mapWidth;
@@ -64,6 +67,12 @@ void Game::Init()
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
 	{
 		Logger::Err("SDL INIT FAILED :( !");
+		return;
+	}
+
+	if (TTF_Init() != 0)
+	{
+		Logger::Err("SDL_TTF INIT FAILED :(!");
 		return;
 	}
 
@@ -112,6 +121,7 @@ void Game::LoadLevel(int32_t level)
 	registry->AddSystem<CameraMovementSystem>();
 	registry->AddSystem<ProjectileEmitterSystem>();
 	registry->AddSystem<ProjectileLifeCycleSystem>();
+	registry->AddSystem<RenderTextSystem>();
 
 	// Adding assets to asset manager
 	assetManager->AddTexture(renderer, "tank_panther_right", "./assets/images/tank-panther-right.png");
@@ -122,6 +132,8 @@ void Game::LoadLevel(int32_t level)
 	assetManager->AddTexture(renderer, "chopper-img", "./assets/images/chopper-spritesheet.png");
 	assetManager->AddTexture(renderer, "radar-img", "./assets/images/radar.png");
 	assetManager->AddTexture(renderer, "bullet-img", "./assets/images/bullet.png");
+
+	assetManager->AddFont("charriot-font", "./assets/fonts/charriot.ttf", 42);
 
 
 	// Loading Tile Map
@@ -167,8 +179,8 @@ void Game::LoadLevel(int32_t level)
 	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -2000), glm::vec2(2000, 0), glm::vec2(0, 2000), glm::vec2(-2000, 0));
 	chopper.AddComponent<CameraFollowComponent>();
 	chopper.AddComponent<HealthComponent>(100);
-	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(221.0, 221.0), 0, 3300, 25, true);
-	chopper.AddComponent<BoxColliderComponent>(32, 32);
+	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(3000.0, 3000.0), 0, 10000, 25, true);
+	chopper.AddComponent<BoxColliderComponent>(32 * 4, 32 * 4);
 	chopper.Tag("player");
 
 	Entity radar = registry->CreateEntity();
@@ -182,7 +194,7 @@ void Game::LoadLevel(int32_t level)
 	tank.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
 	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32, 1);
 	tank.AddComponent<BoxColliderComponent>(32, 32);
-	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(5000.0, 5000.0), 2000, 3000, 10);
+	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(2000.0, 2000.0), 2000, 10000, 10);
 	tank.AddComponent<HealthComponent>(100);
 	tank.Group("enemy");
 
@@ -193,9 +205,13 @@ void Game::LoadLevel(int32_t level)
 	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32, 2);
 	// bounding box not considering scale of object, need to think about it
 	antitank.AddComponent<BoxColliderComponent>(32 * 5, 32 * 5);
-	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-5000.0, -5000.0), 2000, 3000, 5);
+	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-1800.0, -1800.0), 2000, 10000, 30);
 	antitank.AddComponent<HealthComponent>(200);
 	antitank.Group("enemy");
+
+	Entity textTest = registry->CreateEntity();
+	SDL_Color colorTest = {55, 222, 111};
+	textTest.AddComponent<TextComponent>(glm::vec2(windowWidth / 3, 111), "THIS IS MIGHT BEE SOME USEFULL TEXT, But It's Just A Placeholder [-_- ] ", "charriot-font", colorTest);
 
 }
 
@@ -240,7 +256,7 @@ void Game::ProcessInput()
 				{
 					isRunning = false;
 				}
-				if(sdlEvent.key.keysym.sym == SDLK_SPACE)
+				if(sdlEvent.key.keysym.sym == SDLK_c)
 				{
 					isDebug= !isDebug;
 				}
@@ -290,6 +306,8 @@ void Game::Render()
 	if(isDebug)
 		registry->GetSystem<CollisionSystem>().RenderBoxCollision(renderer, camera);
 	
+	registry->GetSystem<RenderTextSystem>().Update(renderer , assetManager, camera);
+
 	SDL_RenderPresent(renderer);
 }
 
