@@ -2,9 +2,10 @@
 #define CAMERAMOVEMENTSYSTEM_H
 
 #include "ECS.h"
-#include "CameraFollowComponent.h"
-#include "TransformComponent.h"
 #include "SDL.h"
+#include "TransformComponent.h"
+#include "CameraFollowComponent.h"
+
 
 class CameraMovementSystem: public System
 {

@@ -1,9 +1,11 @@
 #include <iostream>
 #include <fstream>
+
 #include "Constants.h"
 #include "Game.h"
 #include "ECS.h"
-#include "glm/glm.hpp"
+// #include "glm/glm.hpp"
+
 
 #include "TransformComponent.h"
 #include "MovementSystem.h"
@@ -31,9 +33,11 @@
 #include "ProjectileLifeCycleSystem.h"
 
 #include "HealthComponent.h"
+#include "RenderHealthBarSystem.h"
 
 #include "TextComponent.h"
 #include "RenderTextSystem.h"
+
 
 uint32_t Game::windowWidth;
 uint32_t Game::windowHeight;
@@ -92,7 +96,11 @@ void Game::Init()
 		return;
 	}
 	SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
-
+	SDL_DisplayMode screenInfo;
+	SDL_GetCurrentDisplayMode(0, &screenInfo);
+	ImGui::CreateContext();
+	ImGuiSDL::Initialize(renderer, screenInfo.w, screenInfo.h);
+	
 	camera.x = 0;
 	camera.y = 0;
 	camera.w = windowWidth;
@@ -122,6 +130,7 @@ void Game::LoadLevel(int32_t level)
 	registry->AddSystem<ProjectileEmitterSystem>();
 	registry->AddSystem<ProjectileLifeCycleSystem>();
 	registry->AddSystem<RenderTextSystem>();
+	registry->AddSystem<RenderHealthBarSystem>();
 
 	// Adding assets to asset manager
 	assetManager->AddTexture(renderer, "tank_panther_right", "./assets/images/tank-panther-right.png");
@@ -134,7 +143,10 @@ void Game::LoadLevel(int32_t level)
 	assetManager->AddTexture(renderer, "bullet-img", "./assets/images/bullet.png");
 
 	assetManager->AddFont("charriot-font", "./assets/fonts/charriot.ttf", 42);
+	assetManager->AddFont("pico12-font", "./assets/fonts/pico8.ttf", 12);
+	assetManager->AddFont("pico14-font", "./assets/fonts/pico8.ttf", 14);
 
+	Logger::Err("Assets Loaded");
 
 	// Loading Tile Map
 	int32_t tileSize = 32;
@@ -245,6 +257,19 @@ void Game::ProcessInput()
 	SDL_Event sdlEvent;
 	while(SDL_PollEvent(&sdlEvent))
 	{
+		if (isDebug)
+		{
+			ImGui_ImplSDL2_ProcessEvent(&sdlEvent);
+			ImGuiIO& inputOutput = ImGui::GetIO();
+
+			int32_t mouseX, mouseY;
+			const int32_t buttons = SDL_GetMouseState(&mouseX, &mouseY);
+
+			inputOutput.MousePos = ImVec2(mouseX, mouseY);
+			inputOutput.MouseDown[0] = buttons & SDL_BUTTON(SDL_BUTTON_LEFT);
+			inputOutput.MouseDown[1] = buttons & SDL_BUTTON(SDL_BUTTON_RIGHT);
+		}
+
 		switch (sdlEvent.type)
 		{
 			case SDL_QUIT:
@@ -306,8 +331,14 @@ void Game::Render()
 
 	registry->GetSystem<RenderSystem>().Update(renderer, assetManager, camera);
 	if(isDebug)
+	{
 		registry->GetSystem<CollisionSystem>().RenderBoxCollision(renderer, camera);
-	
+		ImGui::NewFrame();
+		ImGui::ShowDemoWindow();
+		ImGui::Render();
+		ImGuiSDL::Render(ImGui::GetDrawData());
+	}
+	registry->GetSystem<RenderHealthBarSystem>().Update(renderer, assetManager, camera);
 	registry->GetSystem<RenderTextSystem>().Update(renderer , assetManager, camera);
 
 	SDL_RenderPresent(renderer);
@@ -315,6 +346,8 @@ void Game::Render()
 
 void Game::Destroy()
 {
+	ImGuiSDL::Deinitialize();
+	ImGui::DestroyContext();
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();

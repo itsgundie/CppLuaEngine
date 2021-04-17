@@ -6,7 +6,9 @@
 #include "SDL_ttf.h"
 #include "glm/glm.hpp"
 #include "imgui.h"
-#include "sol/sol.hpp"
+#include "imgui_sdl.h"
+#include "imgui_impl_sdl.h"
+#include "sol.hpp"
 
 #include "Logger.h"
 #include "ECS.h"

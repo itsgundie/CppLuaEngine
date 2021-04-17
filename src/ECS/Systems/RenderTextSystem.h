@@ -37,6 +37,7 @@ class RenderTextSystem: public System
                     widthText, heightText
                 };
                 SDL_RenderCopy(renderer, textureFont, NULL, &dstRect);
+                SDL_DestroyTexture(textureFont);
             }
         }        
 };
