@@ -197,7 +197,15 @@ void Registry::Update()
     for(auto entity: entitiesToBeRemoved)
     {
         RemoveEntityFromSystems(entity);
+
+        for(auto pool: componentPools)
+        {
+            if(pool)
+                pool->RemoveEntityFromPool(entity.GetId());
+        }
+
         freeIds.push_back(entity.GetId());
+
         RemoveEntityTag(entity);
         RemoveEntityGroup(entity);
         entityComponentSignatures[entity.GetId()].reset();
