@@ -57,8 +57,8 @@ public:
             Logger::Log("Player Health is " + std::to_string(health.healthPercentage) + " !!!");
             if (health.healthPercentage <= 0)
                 player.Kill();
+            projectile.Kill();
         }
-        projectile.Kill();
     }
 
     void    OnProjectileHitsEnemy(Entity projectile, Entity enemy)
@@ -72,14 +72,8 @@ public:
             Logger::Log("Enemy Health is " + std::to_string(health.healthPercentage) + " ^-^");
             if (health.healthPercentage <= 0)
                 enemy.Kill();
+            projectile.Kill();
         }
-        projectile.Kill();
-    }
-    
-
-    void    Update()
-    {
-
     }
 };
 

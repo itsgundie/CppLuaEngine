@@ -190,24 +190,26 @@ void Game::LoadLevel(int32_t level)
 	radar.AddComponent<AnimationComponent>(8, 4, true);
 
 	Entity tank = registry->CreateEntity();
-	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 11.0f), glm::vec2(1.0f, 1.0f), 33.0f);
+	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 11.0f), glm::vec2(5.0f, 5.0f), 33.0f);
 	tank.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
 	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32, 1);
-	tank.AddComponent<BoxColliderComponent>(32, 32);
+	tank.AddComponent<BoxColliderComponent>(32 * tank.GetComponent<TransformComponent>().scale.x,
+									 		32 * tank.GetComponent<TransformComponent>().scale.y);
 	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(2000.0, 2000.0), 2000, 10000, 10);
 	tank.AddComponent<HealthComponent>(100);
 	tank.Group("enemy");
 
 
 	Entity antitank = registry->CreateEntity();
+	antitank.Group("enemy");
 	antitank.AddComponent<TransformComponent>(glm::vec2(1400.0f, 1000.0f), glm::vec2(5.0f, 5.0f), 21.0f);
 	antitank.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
-	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32, 2);
+	antitank.AddComponent<SpriteComponent>("tank_panther_left", 32, 32, 1);
 	// bounding box not considering scale of object, need to think about it
-	antitank.AddComponent<BoxColliderComponent>(32 * 5, 32 * 5);
-	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-1800.0, -1800.0), 2000, 10000, 30);
+	antitank.AddComponent<BoxColliderComponent>(32 * antitank.GetComponent<TransformComponent>().scale.x,
+											 32 * antitank.GetComponent<TransformComponent>().scale.y);
+	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-1800.0, -1800.0), 3000, 10000, 30);
 	antitank.AddComponent<HealthComponent>(200);
-	antitank.Group("enemy");
 
 	Entity textTest = registry->CreateEntity();
 	SDL_Color colorTest = {55, 222, 111};

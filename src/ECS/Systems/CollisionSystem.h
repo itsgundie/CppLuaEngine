@@ -9,7 +9,12 @@
 
 class CollisionSystem: public System
 {
-    private:
+    public:
+        CollisionSystem()
+        {
+            RequireComponent<TransformComponent>();
+            RequireComponent<BoxColliderComponent>();
+        };
 
         bool CheckCollisionAABB(double_t aX, double_t aY, double_t aWidth, double_t aHeight, double_t bX, double bY, double_t bWidth, double_t bHeight)
         {
@@ -19,13 +24,6 @@ class CollisionSystem: public System
                 aY < bY + bHeight &&
                 aY + aHeight > bY
             );
-        };
-
-    public:
-        CollisionSystem()
-        {
-            RequireComponent<TransformComponent>();
-            RequireComponent<BoxColliderComponent>();
         };
 
         void Update(std::unique_ptr<EventBus>& eventBus)

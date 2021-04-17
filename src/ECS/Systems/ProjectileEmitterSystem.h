@@ -87,8 +87,8 @@ public:
                 if(entity.HasComponent<SpriteComponent>())
                 {
                     const auto sprite = entity.GetComponent<SpriteComponent>();
-                    projectilePosition.x = (transform.scale.x * sprite.width / 2);
-                    projectilePosition.y = (transform.scale.y * sprite.height / 2);
+                    projectilePosition.x += (transform.scale.x * sprite.width / 2);
+                    projectilePosition.y += (transform.scale.y * sprite.height / 2);
                 }
                 Entity newProjectile = registry->CreateEntity();
                 newProjectile.Group("projectile");

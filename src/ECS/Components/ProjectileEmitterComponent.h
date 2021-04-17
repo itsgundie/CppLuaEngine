@@ -16,7 +16,7 @@ struct ProjectileEmitterComponent
     ProjectileEmitterComponent(glm::vec2 projectileVelocity = glm::vec2(0), 
                                 int32_t projectileRepeatFrequency = 0,
                                 int32_t projectileDuration = 1000,
-                                int32_t hitPercentDamage = 10,
+                                int32_t hitPercentDamage = 1,
                                 bool isFriendly = false)
     {
         this->projectileVelocity = projectileVelocity;
