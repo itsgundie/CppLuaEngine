@@ -19,6 +19,8 @@ class RenderHealthBarSystem: public System
             RequireComponent<HealthComponent>();
         };
         
+        
+
         void Update(SDL_Renderer* renderer, const std::unique_ptr<AssetManager>& assetManager, const SDL_Rect& camera)
         {
             for (auto entity: GetSystemEntities())
@@ -53,7 +55,7 @@ class RenderHealthBarSystem: public System
                 SDL_RenderFillRect(renderer, &healthBarRect);
 
                 std::string healthBarText = std::to_string(health.healthPercentage);
-                SDL_Surface* surface = TTF_RenderText_Blended(assetManager->GetFont("pico12-font"), healthBarText.c_str(), healthBarColor);
+                SDL_Surface* surface = TTF_RenderText_Blended(assetManager->GetFont("pico12_font"), healthBarText.c_str(), healthBarColor);
                 SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
                 SDL_FreeSurface(surface);
 

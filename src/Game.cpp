@@ -38,6 +38,7 @@
 #include "TextComponent.h"
 #include "RenderTextSystem.h"
 
+#include "RenderGuiSystem.h"
 
 uint32_t Game::windowWidth;
 uint32_t Game::windowHeight;
@@ -131,20 +132,21 @@ void Game::LoadLevel(int32_t level)
 	registry->AddSystem<ProjectileLifeCycleSystem>();
 	registry->AddSystem<RenderTextSystem>();
 	registry->AddSystem<RenderHealthBarSystem>();
+	registry->AddSystem<RenderGuiSystem>();
 
 	// Adding assets to asset manager
 	assetManager->AddTexture(renderer, "tank_panther_right", "./assets/images/tank-panther-right.png");
 	assetManager->AddTexture(renderer, "tank_panther_left", "./assets/images/tank-panther-left.png");
 	assetManager->AddTexture(renderer, "tank_panther_up", "./assets/images/tank-panther-up.png");
 	assetManager->AddTexture(renderer, "tank_panther_down", "./assets/images/tank-panther-down.png");
-	assetManager->AddTexture(renderer, "tilemap-jungle", "./assets/tilemaps/jungle.png");
-	assetManager->AddTexture(renderer, "chopper-img", "./assets/images/chopper-spritesheet.png");
-	assetManager->AddTexture(renderer, "radar-img", "./assets/images/radar.png");
-	assetManager->AddTexture(renderer, "bullet-img", "./assets/images/bullet.png");
+	assetManager->AddTexture(renderer, "tilemap_jungle", "./assets/tilemaps/jungle.png");
+	assetManager->AddTexture(renderer, "chopper_img", "./assets/images/chopper-spritesheet.png");
+	assetManager->AddTexture(renderer, "radar_img", "./assets/images/radar.png");
+	assetManager->AddTexture(renderer, "bullet_img", "./assets/images/bullet.png");
 
-	assetManager->AddFont("charriot-font", "./assets/fonts/charriot.ttf", 42);
-	assetManager->AddFont("pico12-font", "./assets/fonts/pico8.ttf", 12);
-	assetManager->AddFont("pico14-font", "./assets/fonts/pico8.ttf", 14);
+	assetManager->AddFont("charriot_font", "./assets/fonts/charriot.ttf", 42);
+	assetManager->AddFont("pico12_font", "./assets/fonts/pico8.ttf", 12);
+	assetManager->AddFont("pico14_font", "./assets/fonts/pico8.ttf", 14);
 
 	Logger::Err("Assets Loaded");
 
@@ -175,7 +177,7 @@ void Game::LoadLevel(int32_t level)
 			tile.AddComponent<TransformComponent>(glm::vec2(x * (tileScale * tileSize),
 				y * (tileScale * tileSize)), glm::vec2(tileScale, tileScale), 0.0f);
 
-			tile.AddComponent<SpriteComponent>("tilemap-jungle", tileSize, tileSize, 0, false, srcRectX, srcRectY);
+			tile.AddComponent<SpriteComponent>("tilemap_jungle", tileSize, tileSize, 0, false, srcRectX, srcRectY);
 		}
 	}
 	jungleMap.close();
@@ -186,7 +188,7 @@ void Game::LoadLevel(int32_t level)
 	Entity chopper = registry->CreateEntity();
 	chopper.AddComponent<TransformComponent>(glm::vec2(500.0f, 500.0f), glm::vec2(4.0f, 4.0f), 0.0f);
 	chopper.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
-	chopper.AddComponent<SpriteComponent>("chopper-img", 32, 32, 3);
+	chopper.AddComponent<SpriteComponent>("chopper_img", 32, 32, 3);
 	chopper.AddComponent<AnimationComponent>(2, 8, true);
 	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -2000), glm::vec2(2000, 0), glm::vec2(0, 2000), glm::vec2(-2000, 0));
 	chopper.AddComponent<CameraFollowComponent>();
@@ -198,7 +200,7 @@ void Game::LoadLevel(int32_t level)
 	Entity radar = registry->CreateEntity();
 	radar.AddComponent<TransformComponent>(glm::vec2(1500.0f, 50.0f), glm::vec2(1.0f, 1.0f), 0.0f);
 	radar.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
-	radar.AddComponent<SpriteComponent>("radar-img", 64, 64, 99, true);
+	radar.AddComponent<SpriteComponent>("radar_img", 64, 64, 99, true);
 	radar.AddComponent<AnimationComponent>(8, 4, true);
 
 	Entity tank = registry->CreateEntity();
@@ -225,7 +227,7 @@ void Game::LoadLevel(int32_t level)
 
 	Entity textTest = registry->CreateEntity();
 	SDL_Color colorTest = {55, 222, 111};
-	textTest.AddComponent<TextComponent>(glm::vec2(windowWidth / 3, 111), "THIS IS MIGHT BEE SOME USEFULL TEXT, But It's Just A Placeholder [-_- ] ", "charriot-font", colorTest);
+	textTest.AddComponent<TextComponent>(glm::vec2(windowWidth / 3, 111), "THIS IS MIGHT BEE SOME USEFULL TEXT, But It's Just A Placeholder [-_- ] ", "charriot_font", colorTest);
 
 }
 
@@ -333,10 +335,7 @@ void Game::Render()
 	if(isDebug)
 	{
 		registry->GetSystem<CollisionSystem>().RenderBoxCollision(renderer, camera);
-		ImGui::NewFrame();
-		ImGui::ShowDemoWindow();
-		ImGui::Render();
-		ImGuiSDL::Render(ImGui::GetDrawData());
+		registry->GetSystem<RenderGuiSystem>().Update(registry, camera);
 	}
 	registry->GetSystem<RenderHealthBarSystem>().Update(renderer, assetManager, camera);
 	registry->GetSystem<RenderTextSystem>().Update(renderer , assetManager, camera);
