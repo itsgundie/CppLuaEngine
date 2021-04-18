@@ -28,6 +28,15 @@ class MovementSystem: public System
             transform.position.x += rigidBody.velocity.x * deltaTime;
             transform.position.y += rigidBody.velocity.y * deltaTime;
 
+            bool isEntityOutBounds = (
+                transform.position.x < 0 ||
+                transform.position.x > Game::mapWidth ||
+                transform.position.y < 0 ||
+                transform.position.y > Game::mapHeight
+            );
+
+            if (isEntityOutBounds && !entity.HasTag("player"))
+                entity.Kill();
             // Logger::Log("Entity ID = " + std::to_string(entity.GetId()) 
             //     + " position is now at (" + std::to_string(transform.position.x) + ", "
             //     + std::to_string(transform.position.y) + ")");
