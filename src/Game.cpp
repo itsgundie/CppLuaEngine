@@ -42,6 +42,8 @@
 
 uint32_t Game::windowWidth;
 uint32_t Game::windowHeight;
+uint32_t Game::displayWidth;
+uint32_t Game::displayHeight;
 uint32_t Game::mapWidth;
 uint32_t Game::mapHeight;
 
@@ -99,6 +101,9 @@ void Game::Init()
 	SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
 	SDL_DisplayMode screenInfo;
 	SDL_GetCurrentDisplayMode(0, &screenInfo);
+	displayWidth = screenInfo.w;
+	displayHeight = screenInfo.h;
+
 	ImGui::CreateContext();
 	ImGuiSDL::Initialize(renderer, screenInfo.w, screenInfo.h);
 	
@@ -143,6 +148,7 @@ void Game::LoadLevel(int32_t level)
 	assetManager->AddTexture(renderer, "chopper_img", "./assets/images/chopper-spritesheet.png");
 	assetManager->AddTexture(renderer, "radar_img", "./assets/images/radar.png");
 	assetManager->AddTexture(renderer, "bullet_img", "./assets/images/bullet.png");
+	assetManager->AddTexture(renderer, "tree_img", "./assets/images/tree.png");
 
 	assetManager->AddFont("charriot_font", "./assets/fonts/charriot.ttf", 42);
 	assetManager->AddFont("pico12_font", "./assets/fonts/pico8.ttf", 12);
@@ -204,8 +210,8 @@ void Game::LoadLevel(int32_t level)
 	radar.AddComponent<AnimationComponent>(8, 4, true);
 
 	Entity tank = registry->CreateEntity();
-	tank.AddComponent<TransformComponent>(glm::vec2(11.0f, 11.0f), glm::vec2(5.0f, 5.0f), 33.0f);
-	tank.AddComponent<RigidBodyComponent>(glm::vec2(0.0f, 0.0f));
+	tank.AddComponent<TransformComponent>(glm::vec2(500.0f, 1000.0f), glm::vec2(5.0f, 5.0f), 33.0f);
+	tank.AddComponent<RigidBodyComponent>(glm::vec2(1000.0f, 0.0f));
 	tank.AddComponent<SpriteComponent>("tank_panther_right", 32, 32, 1);
 	tank.AddComponent<BoxColliderComponent>(32 * tank.GetComponent<TransformComponent>().scale.x,
 									 		32 * tank.GetComponent<TransformComponent>().scale.y);
@@ -224,6 +230,23 @@ void Game::LoadLevel(int32_t level)
 											 32 * antitank.GetComponent<TransformComponent>().scale.y);
 	antitank.AddComponent<ProjectileEmitterComponent>(glm::vec2(-1800.0, -1800.0), 3000, 10000, 30);
 	antitank.AddComponent<HealthComponent>(200);
+
+
+	Entity treeA = registry->CreateEntity();
+	treeA.AddComponent<TransformComponent>(glm::vec2(400.0f, 1050.0f), glm::vec2(3.0f, 3.0f), 0.0f);
+	treeA.AddComponent<SpriteComponent>("tree_img", 32, 32, 1);
+	treeA.AddComponent<BoxColliderComponent>(32 * treeA.GetComponent<TransformComponent>().scale.x,
+									 		32 * treeA.GetComponent<TransformComponent>().scale.y);
+	treeA.Group("obstacle");
+
+	Entity treeB = registry->CreateEntity();
+	treeB.AddComponent<TransformComponent>(glm::vec2(1000.0f, 1050.0f), glm::vec2(3.0f, 3.0f), 0.0f);
+	treeB.AddComponent<SpriteComponent>("tree_img", 32, 32, 1);
+	treeB.AddComponent<BoxColliderComponent>(32 * treeB.GetComponent<TransformComponent>().scale.x,
+									 		32 * treeB.GetComponent<TransformComponent>().scale.y);
+	treeB.Group("obstacle");
+
+
 
 	Entity textTest = registry->CreateEntity();
 	SDL_Color colorTest = {55, 222, 111};
@@ -309,6 +332,7 @@ void Game::Update()
 	msSincePrevFrame = SDL_GetTicks();
 
 	eventBus->Reset();
+	registry->GetSystem<MovementSystem>().SubscribeToEvents(eventBus);
 	registry->GetSystem<DamageSystem>().SubscribeToEvents(eventBus);
 	registry->GetSystem<KeyboardControlSystem>().SubscribeToEvents(eventBus);
 	registry->GetSystem<ProjectileEmitterSystem>().SubscribeToEvents(eventBus);

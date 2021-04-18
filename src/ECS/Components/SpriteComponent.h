@@ -10,6 +10,7 @@ struct SpriteComponent
     int32_t zIndex;
     bool    isFixed;
     std::string assetId;
+    SDL_RendererFlip flip;
 
     SDL_Rect srcRect;
 
@@ -22,6 +23,7 @@ struct SpriteComponent
         this->zIndex = zIndex;
         this->isFixed = isFixed;
         this->srcRect = { srcRectX, srcRectY, width, height};
+        this->flip = SDL_FLIP_NONE;
     }
 };
 

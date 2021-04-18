@@ -36,7 +36,20 @@ class RenderSystem: public System
                 RenderebleEntity renderebleEntity;
                 renderebleEntity.sprite = entity.GetComponent<SpriteComponent>();
                 renderebleEntity.transform = entity.GetComponent<TransformComponent>();
+                
+                bool isEntityOutsideCameraView = (
+                            renderebleEntity.transform.position.x + 
+                                (renderebleEntity.transform.scale.x *
+                                    renderebleEntity.sprite.width) < camera.x ||
+                            renderebleEntity.transform.position.y + 
+                                (renderebleEntity.transform.scale.y *
+                                    renderebleEntity.sprite.height) < camera.y ||
+                    renderebleEntity.transform.position.x > camera.x + Game::displayWidth ||
+                    renderebleEntity.transform.position.y > camera.y + Game::displayHeight
+                );
 
+                if (isEntityOutsideCameraView && !renderebleEntity.sprite.isFixed)
+                    continue;
                 renderebleEntities.emplace_back(renderebleEntity);
             }
 
@@ -64,7 +77,7 @@ class RenderSystem: public System
                     };
 
                 SDL_RenderCopyEx(renderer, assetManager->GetTexture(sprite.assetId),
-                     &srcRect, &dstRect, transform.rotation, NULL, SDL_FLIP_NONE);
+                     &srcRect, &dstRect, transform.rotation, NULL, sprite.flip);
             }
         }
 };

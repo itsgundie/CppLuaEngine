@@ -37,6 +37,8 @@ class Game
     public:
         static uint32_t windowWidth;
         static uint32_t windowHeight;
+        static uint32_t displayWidth;
+        static uint32_t displayHeight;
         static uint32_t mapWidth;
         static uint32_t mapHeight;
         Game();

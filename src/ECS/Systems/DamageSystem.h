@@ -16,7 +16,7 @@ public:
     {
         RequireComponent<BoxColliderComponent>();
     };
-    void SubscribeToEvents(std::unique_ptr<EventBus>& eventBus)
+    void SubscribeToEvents(const std::unique_ptr<EventBus>& eventBus)
     {
         eventBus->SubscribeToEvent<CollisionEvent>(this, &DamageSystem::OnCollisionEvent);
     }
